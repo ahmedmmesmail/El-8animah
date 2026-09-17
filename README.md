@@ -98,14 +98,14 @@ The project is designed to grow over time as new Android development patterns an
 
 * [ ] Project architecture
 * [ ] Navigation structure
-* [ ] Common UI components
+* [x] Common UI components
 * [ ] Common error handling
 * [ ] Loading states
 * [ ] Empty states
 
 ### UI
 
-* [ ] Settings Screen
+* [x] Settings Screen
 * [ ] About Screen
 * [ ] Appearance
 * [ ] Forms
@@ -143,10 +143,10 @@ The project is designed to grow over time as new Android development patterns an
 ### Localization
 
 * [ ] Arabic
-* [ ] English
+* [x] English
 * [ ] French
-* [ ] RTL Support
-* [ ] Runtime Language Switching
+* [x] RTL Support
+* [x] Runtime Language Switching
 
 ### Developer Tools
 
