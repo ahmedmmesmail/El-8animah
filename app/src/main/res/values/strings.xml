@@ -55,4 +55,6 @@
     <string name="backup_failed">Backup failed. Please try again.</string>
     <string name="backup_permission_required">Storage permission is required to save backups.</string>
     <string name="ok">OK</string>
+    <string name="settings_share">Share</string>
+    <string name="check_out">Check out El-8animah!</string>
 </resources>

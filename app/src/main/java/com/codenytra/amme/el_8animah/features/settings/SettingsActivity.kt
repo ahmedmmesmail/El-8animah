@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import com.codenytra.amme.el_8animah.BuildConfig
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -22,9 +23,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Apps
 import androidx.compose.material.icons.rounded.Backup
-import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.DeleteForever
-import androidx.compose.material.icons.rounded.Error
 import androidx.compose.material.icons.rounded.Feedback
 import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.Language
@@ -35,16 +34,10 @@ import androidx.compose.material.icons.rounded.Policy
 import androidx.compose.material.icons.rounded.Restore
 import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material.icons.rounded.StarRate
-import androidx.compose.material.icons.rounded.Warning
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -55,23 +48,26 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.codenytra.amme.el_8animah.BaseActivity
 import com.codenytra.amme.el_8animah.R
+import com.codenytra.amme.el_8animah.features.backup.BackupResultDialog
+import com.codenytra.amme.el_8animah.features.backup.ResetDialog
+import com.codenytra.amme.el_8animah.features.backup.ZipUtils
+import com.codenytra.amme.el_8animah.features.feecback.FeedbackDialog
 import com.codenytra.amme.el_8animah.features.localization.LanguagePickerSheet
 import com.codenytra.amme.el_8animah.features.localization.LocaleHelper
 import com.codenytra.amme.el_8animah.features.localization.LocaleViewModel
 import com.codenytra.amme.el_8animah.features.settings.components.SettingItem
 import com.codenytra.amme.el_8animah.features.settings.components.SettingsSection
 import com.codenytra.amme.el_8animah.features.settings.components.SettingsTrailing
-import com.codenytra.amme.el_8animah.features.backup.ZipUtils
 import com.codenytra.amme.el_8animah.ui.theme.El8animahTheme
-import androidx.core.content.edit
 
 class SettingsActivity : BaseActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -114,12 +110,18 @@ fun SettingsScreen(
 
     val context = LocalContext.current
 
-    var notificationsEnabled by remember { mutableStateOf(false) }
+    var notifications by remember {
+        mutableStateOf(
+            PermissionHelper.hasNotificationPermission(
+                context
+            )
+        )
+    }
     var pinLockEnabled by remember { mutableStateOf(true) }
-
     var showBackupResultDialog by remember { mutableStateOf<String?>(null) }
     var showResetDialog by remember { mutableStateOf(false) }
     var showLanguageSheet by remember { mutableStateOf(false) }
+    var showFeedbackSheet by remember { mutableStateOf(false) }
 
     val prefs = remember {
         context.getSharedPreferences(
@@ -171,46 +173,35 @@ fun SettingsScreen(
         )
     }
 
-    if (showResetDialog) {
-        AlertDialog(
-            onDismissRequest = { showResetDialog = false },
-            icon = { Icon(Icons.Rounded.Warning, null, tint = MaterialTheme.colorScheme.error) },
-            title = {
-                Text(
-                    stringResource(R.string.settings_reset),
-                    style = TextStyle(fontWeight = FontWeight.Bold)
-                )
-            },
-            text = { Text(stringResource(R.string.settings_reset_confirm)) },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        showResetDialog = false
-                        try {
-                            // clearApplicationUserData wipes all app data (prefs, databases,
-                            // files, cache) and restarts the app automatically, similar to
-                            // "Clear Data" in Android system settings
-                            val am = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-                            am.clearApplicationUserData()
-                        } catch (_: Exception) {
-                            // Fallback in case of any error: manual clear of all prefs
-                            prefs.edit { clear() }
-                            context.getSharedPreferences("el_8animah_locale", Context.MODE_PRIVATE).edit { clear() }
+    if (showFeedbackSheet) {
+        FeedbackDialog(onDismiss = { showFeedbackSheet = false })
+    }
 
-                            // Notify other parts of the app that settings were reset,
-                            // since clearApplicationUserData wasn't available to restart for us
-                            context.sendBroadcast(
-                                Intent("com.codenytra.amme.el_8animah.SETTINGS_CHANGED")
-                                    .setPackage(context.packageName)
-                            )
-                        }
-                    },
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
-                ) { Text(stringResource(R.string.settings_reset_confirm_yes)) }
+    if (showResetDialog) {
+        ResetDialog(
+            onDismissRequest = {
+                showResetDialog = false
             },
-            dismissButton = {
-                TextButton(onClick = { showResetDialog = false }) {
-                    Text(stringResource(R.string.settings_reset_confirm_no))
+            onConfirm = {
+                showResetDialog = false
+                try {
+                    // clearApplicationUserData wipes all app data (prefs, databases,
+                    // files, cache) and restarts the app automatically, similar to
+                    // "Clear Data" in Android system settings
+                    val am = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+                    am.clearApplicationUserData()
+                } catch (_: Exception) {
+                    // Fallback in case of any error: manual clear of all prefs
+                    prefs.edit { clear() }
+                    context.getSharedPreferences("el_8animah_locale", Context.MODE_PRIVATE)
+                        .edit { clear() }
+
+                    // Notify other parts of the app that settings were reset,
+                    // since clearApplicationUserData wasn't available to restart for us
+                    context.sendBroadcast(
+                        Intent("com.codenytra.amme.el_8animah.SETTINGS_CHANGED")
+                            .setPackage(context.packageName)
+                    )
                 }
             }
         )
@@ -220,27 +211,10 @@ fun SettingsScreen(
         // Detect success/failure from the message text itself
         // (backup_success string starts with "Backup saved")
         val isSuccess = showBackupResultDialog!!.startsWith("Backup saved")
-        AlertDialog(
-            onDismissRequest = { showBackupResultDialog = null },
-            icon = {
-                Icon(
-                    imageVector = if (!isSuccess) Icons.Rounded.CheckCircle else Icons.Rounded.Error,
-                    contentDescription = null,
-                    tint = if (!isSuccess) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error
-                )
-            },
-            title = {
-                Text(
-                    stringResource(R.string.settings_backup),
-                    style = TextStyle(fontWeight = FontWeight.Bold)
-                )
-            },
-            text = { Text(showBackupResultDialog!!) },
-            confirmButton = {
-                Button(onClick = {
-                    showBackupResultDialog = null
-                }) { Text(stringResource(R.string.ok)) }
-            }
+        BackupResultDialog(
+            isSuccess = isSuccess,
+            showBackupResultDialog = showBackupResultDialog,
+            onDismissRequest = { showBackupResultDialog = null }
         )
     }
 
@@ -264,8 +238,8 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_notifications),
                         subtitle = stringResource(R.string.settings_notifications_desc),
                         trailing = SettingsTrailing.SWITCH,
-                        checked = notificationsEnabled,
-                        onToggle = { notificationsEnabled = it }
+                        checked = notifications,
+                        onToggle = { PermissionHelper.openNotificationSettings(context) }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Language,
@@ -317,17 +291,13 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_restore),
                         subtitle = stringResource(R.string.settings_restore_desc),
                         icon = Icons.Rounded.Restore,
-                        onClick = {
-                            restoreLauncher.launch(arrayOf("*/*"))
-                        }
+                        onClick = { restoreLauncher.launch(arrayOf("*/*")) }
                     ),
                     SettingItem(
                         title = stringResource(R.string.settings_reset),
                         subtitle = stringResource(R.string.settings_reset_desc),
                         icon = Icons.Rounded.DeleteForever,
-                        onClick = {
-                            showResetDialog = true
-                        }
+                        onClick = { showResetDialog = true }
                     ),
                 )
             )
@@ -340,7 +310,14 @@ fun SettingsScreen(
                         icon = Icons.Rounded.StarRate,
                         title = stringResource(R.string.settings_rate_app),
                         subtitle = stringResource(R.string.settings_rate_app_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON,
+                        onClick = {
+                            val intent = Intent(
+                                Intent.ACTION_VIEW,
+                                "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}".toUri()
+                            )
+                            context.startActivity(intent)
+                        }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Apps,
@@ -352,13 +329,37 @@ fun SettingsScreen(
                         icon = Icons.Rounded.Share,
                         title = stringResource(R.string.settings_share_app),
                         subtitle = stringResource(R.string.settings_share_app_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON,
+                        onClick = {
+                            val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                                type = "text/plain"
+                                putExtra(
+                                    Intent.EXTRA_TEXT,
+//                                    sharing text:
+                                    context.getString(R.string.check_out) +
+//                                    app link:
+//                                    add (buildFeatures { buildConfig = true }) in build.gradle.kts
+                                            "\nhttps://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}"
+                                )
+                            }
+                            context.startActivity(
+                                Intent.createChooser(
+                                    shareIntent,
+                                    "${context.getString(R.string.settings_share)} ${
+                                        context.getString(
+                                            R.string.app_name
+                                        )
+                                    }"
+                                )
+                            )
+                        }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Feedback,
                         title = stringResource(R.string.settings_feedback),
                         subtitle = stringResource(R.string.settings_feedback_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON,
+                        onClick = { showFeedbackSheet = true }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Policy,

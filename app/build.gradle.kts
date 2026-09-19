@@ -5,8 +5,12 @@ plugins {
 
 android {
     namespace = "com.codenytra.amme.el_8animah"
-    compileSdk {
-        version = release(37)
+    compileSdk = 37
+
+//    donot forget to add this to use build config
+//    this helps you to get the id and current version of the app
+    buildFeatures {
+        buildConfig = true
     }
 
     defaultConfig {
