@@ -41,6 +41,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -54,6 +55,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.edit
 import androidx.core.net.toUri
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.codenytra.amme.el_8animah.BaseActivity
 import com.codenytra.amme.el_8animah.R
@@ -134,6 +138,20 @@ fun SettingsScreen(
     val currentLanguage = LocaleHelper.supportedLanguages
         .find { it.code == currentLocale }
         ?: LocaleHelper.supportedLanguages.first()
+
+//     ── Refresh state on resume (after PinSetupActivity etc.) ──
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+//                pinLock = PinManager.hasPinSet(context)
+                notifications = PermissionHelper.hasNotificationPermission(context)
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
 
     // Opens a file picker so the user can choose a .8animah backup file to restore
     val restoreLauncher = rememberLauncherForActivityResult(
