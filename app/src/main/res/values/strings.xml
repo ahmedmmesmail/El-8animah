@@ -57,4 +57,33 @@
     <string name="ok">OK</string>
     <string name="settings_share">Share</string>
     <string name="check_out">Check out El-8animah!</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">Set PIN</string>
+    <string name="set_pin">Set PIN</string>
+    <string name="change_pin">Change PIN</string>
+    <string name="pin_step_verify">Enter your current PIN</string>
+    <string name="pin_step_enter">Enter your new PIN</string>
+    <string name="pin_step_confirm">Confirm your new PIN</string>
+    <string name="pin_error_mismatch">PINs don\'t match. Enter again.</string>
+    <string name="pin_error_incorrect">Incorrect PIN. Try again.</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">Enable Biometric Unlock?</string>
+    <string name="biometric_setup_description">Use your fingerprint or face to unlock El-8animah instead of typing your PIN every time.</string>
+    <string name="biometric_setup_skip">Skip, use PIN only</string>
+    <string name="biometric_setup_enable">Enable Biometric</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">Use Fingerprint / Face</string>
+    <string name="enter_pin">Enter your PIN to continue</string>
+    <string name="incorrect_pin">Incorrect PIN. Try again.</string>
+    <string name="biometric_subtitle">Use your fingerprint or face to unlock</string>
+    <string name="use_pin_instead">Use PIN instead</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">OurAppsActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+
 </resources>

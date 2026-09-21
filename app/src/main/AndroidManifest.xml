@@ -33,6 +33,29 @@
             android:label="@string/title_activity_settings"
             android:theme="@style/Theme.El8animah"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.pinlock.PinSetupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.El8animah"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.pinlock.PinLockActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pin_lock"
+            android:theme="@style/Theme.El8animah"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.OurAppsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_our_apps"
+            android:theme="@style/Theme.El8animah"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.AboutActivity"
+            android:exported="false"
+            android:label="@string/title_activity_about"
+            android:theme="@style/Theme.El8animah"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

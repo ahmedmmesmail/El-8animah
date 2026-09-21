@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import com.codenytra.amme.el_8animah.BuildConfig
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +20,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBackIos
 import androidx.compose.material.icons.rounded.Apps
 import androidx.compose.material.icons.rounded.Backup
 import androidx.compose.material.icons.rounded.DeleteForever
@@ -35,11 +35,13 @@ import androidx.compose.material.icons.rounded.Restore
 import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material.icons.rounded.StarRate
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -49,6 +51,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -60,7 +63,9 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.codenytra.amme.el_8animah.BaseActivity
+import com.codenytra.amme.el_8animah.BuildConfig
 import com.codenytra.amme.el_8animah.R
+import com.codenytra.amme.el_8animah.features.OurAppsActivity
 import com.codenytra.amme.el_8animah.features.backup.BackupResultDialog
 import com.codenytra.amme.el_8animah.features.backup.ResetDialog
 import com.codenytra.amme.el_8animah.features.backup.ZipUtils
@@ -68,6 +73,8 @@ import com.codenytra.amme.el_8animah.features.feecback.FeedbackDialog
 import com.codenytra.amme.el_8animah.features.localization.LanguagePickerSheet
 import com.codenytra.amme.el_8animah.features.localization.LocaleHelper
 import com.codenytra.amme.el_8animah.features.localization.LocaleViewModel
+import com.codenytra.amme.el_8animah.features.pinlock.PinManager
+import com.codenytra.amme.el_8animah.features.pinlock.PinSetupActivity
 import com.codenytra.amme.el_8animah.features.settings.components.SettingItem
 import com.codenytra.amme.el_8animah.features.settings.components.SettingsSection
 import com.codenytra.amme.el_8animah.features.settings.components.SettingsTrailing
@@ -87,16 +94,21 @@ class SettingsActivity : BaseActivity() {
                             title = {
                                 Text(
                                     text = stringResource(R.string.settings_title),
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 22.sp
+                                    style = TextStyle(
+                                        fontSize = 20.sp,
+                                        fontWeight = FontWeight.ExtraBold,
+                                        letterSpacing = (-0.3).sp
+                                    )
                                 )
                             },
-                            colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = MaterialTheme.colorScheme.background
-                            )
+                            navigationIcon = {
+                                IconButton(onClick = { finish() }) {
+                                    Icon(Icons.AutoMirrored.Rounded.ArrowBackIos, contentDescription = "Back")
+                                }
+                            },
+                            colors = topAppBarColors(containerColor = MaterialTheme.colorScheme.surface)
                         )
                     },
-                    containerColor = MaterialTheme.colorScheme.background
                 ) { innerPadding ->
                     SettingsScreen(modifier = Modifier.padding(innerPadding))
                 }
@@ -121,7 +133,8 @@ fun SettingsScreen(
             )
         )
     }
-    var pinLockEnabled by remember { mutableStateOf(true) }
+
+    var pinLock by remember { mutableStateOf(PinManager.hasPinSet(context)) }
     var showBackupResultDialog by remember { mutableStateOf<String?>(null) }
     var showResetDialog by remember { mutableStateOf(false) }
     var showLanguageSheet by remember { mutableStateOf(false) }
@@ -145,7 +158,7 @@ fun SettingsScreen(
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
-//                pinLock = PinManager.hasPinSet(context)
+                pinLock = PinManager.hasPinSet(context)
                 notifications = PermissionHelper.hasNotificationPermission(context)
             }
         }
@@ -274,8 +287,15 @@ fun SettingsScreen(
                         title = stringResource(R.string.settings_pin_lock),
                         subtitle = stringResource(R.string.settings_pin_lock_desc),
                         trailing = SettingsTrailing.SWITCH,
-                        checked = pinLockEnabled,
-                        onToggle = { pinLockEnabled = it }
+                        checked = pinLock,
+                        onToggle = { wantsToEnable ->
+                            if (wantsToEnable) {
+                                context.startActivity(Intent(context, PinSetupActivity::class.java))
+                            } else {
+                                PinManager.clearPin(context)
+                                pinLock = false
+                            }
+                        }
                     )
                 )
             )
@@ -341,7 +361,15 @@ fun SettingsScreen(
                         icon = Icons.Rounded.Apps,
                         title = stringResource(R.string.settings_our_apps),
                         subtitle = stringResource(R.string.settings_our_apps_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON,
+                        onClick = {
+                            context.startActivity(
+                                Intent(
+                                    context,
+                                    OurAppsActivity::class.java
+                                )
+                            )
+                        }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Share,

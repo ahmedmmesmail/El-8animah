@@ -30,6 +30,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.codenytra.amme.el_8animah.features.pinlock.PinLockActivity
+import com.codenytra.amme.el_8animah.features.pinlock.PinManager
 import com.codenytra.amme.el_8animah.features.settings.SettingsActivity
 import com.codenytra.amme.el_8animah.ui.theme.El8animahTheme
 
@@ -37,6 +39,14 @@ class MainActivity : BaseActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (PinManager.hasPinSet(this) &&
+            !intent.getBooleanExtra(PinLockActivity.EXTRA_PIN_VERIFIED, false)) {
+            startActivity(Intent(this, PinLockActivity::class.java))
+            finish()
+            return
+        }
+
         enableEdgeToEdge()
         setContent {
             El8animahTheme {

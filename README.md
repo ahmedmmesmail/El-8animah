@@ -33,8 +33,11 @@ The project is designed to grow over time as new Android development patterns an
 
  - add enum class for settings items
  - implement appearance screen
- - implement pin lock
  - implement about activity
+ - implement privacy policy
+ - add more languages
+ - adjust main app theme
+ - add documentation for each feature
 
 
 ---

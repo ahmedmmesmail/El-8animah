@@ -1,10 +1,10 @@
 package com.codenytra.amme.el_8animah
 
 import android.content.Context
-import androidx.activity.ComponentActivity
+import androidx.fragment.app.FragmentActivity
 import com.codenytra.amme.el_8animah.features.localization.LocaleHelper
 
-open class BaseActivity : ComponentActivity() {
+open class BaseActivity : FragmentActivity() {
 
     private var localeWhenCreated: String? = null
 
