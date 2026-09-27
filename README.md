@@ -34,6 +34,7 @@ The project is designed to grow over time as new Android development patterns an
  - implement appearance screen
  - implement about activity
  - implement privacy policy
+ - implement icon changing
  - add more languages
  - add documentation for each feature
 
