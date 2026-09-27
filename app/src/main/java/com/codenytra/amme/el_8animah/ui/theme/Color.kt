@@ -2,10 +2,10 @@ package com.codenytra.amme.el_8animah.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFFFD54F)
-val PurpleGrey80 = Color(0xFFFFF176)
-val Pink80 = Color(0xFFFFB74D)
-
-val Purple40 = Color(0xFFFB8C00)
-val PurpleGrey40 = Color(0xFFFDD835)
-val Pink40 = Color(0xFFFFB300)
+val LightGold = Color(0xFFFFD54F)
+val SandyYellow = Color(0xFFFFF176)
+val Blueberry = Color(0xFF4F378B)
+val Tangerine = Color(0xFFFB8C00)
+val Peach = Color(0xFFFAA781)
+val LightBlue = Color(0xFF00BFFF)
+val LightBlue2 = Color(0xFF81D4FA)

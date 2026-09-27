@@ -31,12 +31,10 @@ The project is designed to grow over time as new Android development patterns an
 ---
 ## Tasks
 
- - add enum class for settings items
  - implement appearance screen
  - implement about activity
  - implement privacy policy
  - add more languages
- - adjust main app theme
  - add documentation for each feature
 
 

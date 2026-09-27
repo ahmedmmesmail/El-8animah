@@ -80,10 +80,42 @@
     <string name="biometric_subtitle">Use your fingerprint or face to unlock</string>
     <string name="use_pin_instead">Use PIN instead</string>
 
+    <!-- Appearance -->
+    <string name="appearance_title">Appearance</string>
+    <string name="appearance_settings_label">Visual Settings</string>
+    <string name="appearance_theme_label">Theme Mode</string>
+    <string name="appearance_theme_system">System</string>
+    <string name="appearance_theme_light">Light</string>
+    <string name="appearance_theme_dark">Dark</string>
+    <string name="appearance_dynamic_color">Dynamic Color</string>
+    <string name="appearance_dynamic_color_desc">Apply system colors (Android 12+)</string>
+    <string name="appearance_color_scheme">Color Scheme</string>
+    <string name="appearance_color_dynamic">Dynamic</string>
+    <string name="appearance_color_default">Default</string>
+    <string name="appearance_color_custom">Custom (%1$s)</string>
+    <string name="appearance_black_theme">Pure Black</string>
+    <string name="appearance_black_theme_desc">Deep black for OLED screens</string>
+
+    <string name="color_chartreuse">Chartreuse</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_amber">Amber</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_soft_red">Soft Red</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_indigo">Indigo</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_cyan">Cyan</string>
+    <string name="color_teal">Teal</string>
+    <string name="color_green">Green</string>
+    <string name="color_lime">Lime</string>
+
     <string name="cancel">Cancel</string>
     <string name="title_activity_pin_lock">PinLockActivity</string>
     <string name="title_activity_our_apps">OurAppsActivity</string>
     <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_appearance">AppearanceActivity</string>
+    <string name="color_red">Red</string>
 
 
 </resources>

@@ -58,14 +58,15 @@ fun SettingsRow(
                 modifier = Modifier
                     .size(44.dp)
                     .background(
-                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+//                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                        color = MaterialTheme.colorScheme.tertiary,
                         shape = RoundedCornerShape(16.dp)
                     )
             ) {
                 Icon(
                     imageVector = item.icon,
                     contentDescription = item.title,
-                    tint = MaterialTheme.colorScheme.primary
+                    tint = MaterialTheme.colorScheme.onTertiary
                 )
             }
 

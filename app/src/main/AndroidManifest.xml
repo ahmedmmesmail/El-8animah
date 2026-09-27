@@ -8,6 +8,7 @@
         android:maxSdkVersion="28" />
 
     <application
+        android:name=".features.appearance.ElGhanimahApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -54,6 +55,12 @@
             android:name=".features.AboutActivity"
             android:exported="false"
             android:label="@string/title_activity_about"
+            android:theme="@style/Theme.El8animah"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.appearance.AppearanceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_appearance"
             android:theme="@style/Theme.El8animah"
             android:windowSoftInputMode="adjustResize" />
     </application>

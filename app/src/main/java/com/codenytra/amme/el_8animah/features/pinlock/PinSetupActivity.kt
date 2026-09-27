@@ -26,6 +26,7 @@ import androidx.compose.material.icons.automirrored.rounded.Backspace
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Fingerprint
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
@@ -250,7 +251,7 @@ private fun BiometricOptInScreen(
     ) {
         Surface(
             shape = CircleShape,
-            color = MaterialTheme.colorScheme.primaryContainer,
+            color = MaterialTheme.colorScheme.tertiary,
             modifier = Modifier.size(96.dp)
         ) {
             Box(contentAlignment = Alignment.Center) {
@@ -368,6 +369,10 @@ fun PinKeypad(onDigit: (String) -> Unit, onDelete: () -> Unit) {
                                     onClick = { onDigit(key) },
                                     modifier = Modifier.size(72.dp),
                                     shape = CircleShape,
+                                    colors = ButtonDefaults.filledTonalButtonColors(
+                                        containerColor = MaterialTheme.colorScheme.secondary,
+                                        contentColor = MaterialTheme.colorScheme.onSecondary
+                                    ),
                                     contentPadding = PaddingValues(0.dp)
                                 ) {
                                     Text(
