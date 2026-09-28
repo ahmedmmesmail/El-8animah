@@ -31,7 +31,7 @@ The project is designed to grow over time as new Android development patterns an
 ---
 ## Tasks
 
- - implement appearance screen
+ - adjust themes for the appearance screen
  - implement about activity
  - implement privacy policy
  - implement icon changing

@@ -66,6 +66,7 @@ import com.codenytra.amme.el_8animah.BaseActivity
 import com.codenytra.amme.el_8animah.BuildConfig
 import com.codenytra.amme.el_8animah.R
 import com.codenytra.amme.el_8animah.features.OurAppsActivity
+import com.codenytra.amme.el_8animah.features.appearance.AppearanceActivity
 import com.codenytra.amme.el_8animah.features.backup.BackupResultDialog
 import com.codenytra.amme.el_8animah.features.backup.ResetDialog
 import com.codenytra.amme.el_8animah.features.backup.ZipUtils
@@ -262,7 +263,10 @@ fun SettingsScreen(
                         icon = Icons.Rounded.Palette,
                         title = stringResource(R.string.settings_appearance),
                         subtitle = stringResource(R.string.settings_appearance_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON ,
+                        onClick = {
+                            context.startActivity(Intent(context, AppearanceActivity::class.java))
+                        }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Notifications,
