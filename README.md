@@ -29,14 +29,6 @@ The project is organized by features and topics, with dedicated documentation ex
 The project is designed to grow over time as new Android development patterns and solutions are added.
 
 ---
-## Tasks
-
- - add more languages
- - add documentation for each feature
- - implement auth screens
-
-
----
 ## ✨ Features
 
 ### 🎨 UI & Screens

@@ -35,11 +35,11 @@ object LocaleHelper {
         AppLanguage("de", "German", "Deutsch", "🇩🇪"),
         AppLanguage("it", "Italian", "Italiano", "🇮🇹"),
         AppLanguage("ru", "Russian", "Русский", "🇷🇺"),
+        AppLanguage("pt", "Portuguese", "Português", "🇵🇹"),
+        AppLanguage("tr", "Turkish", "Türkçe", "🇹🇷"),
         AppLanguage("zh", "Chinese", "中文 (简体)", "🇨🇳"),
         AppLanguage("ja", "Japanese", "日本語", "🇯🇵"),
         AppLanguage("hi", "Hindi", "हिन्दी", "🇮🇳"),
-        AppLanguage("pt", "Portuguese", "Português", "🇵🇹"),
-        AppLanguage("tr", "Turkish", "Türkçe", "🇹🇷"),
     )
 
     fun saveLocale(context: Context, localeCode: String) {

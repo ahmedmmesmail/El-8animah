@@ -4,12 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -23,13 +23,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.codenytra.amme.el_8animah.features.AnimatedAppIcon
 import com.codenytra.amme.el_8animah.features.pinlock.PinLockActivity
 import com.codenytra.amme.el_8animah.features.pinlock.PinManager
 import com.codenytra.amme.el_8animah.features.settings.SettingsActivity
@@ -42,7 +42,8 @@ class MainActivity : BaseActivity() {
 
         // If a PIN is configured and this launch wasn't unlocked yet, redirect to PinLockActivity
         if (PinManager.hasPinSet(this) &&
-            !intent.getBooleanExtra(PinLockActivity.EXTRA_PIN_VERIFIED, false)) {
+            !intent.getBooleanExtra(PinLockActivity.EXTRA_PIN_VERIFIED, false)
+        ) {
             startActivity(Intent(this, PinLockActivity::class.java))
             finish()
             return
@@ -98,11 +99,8 @@ fun HomeScreen() {
                 .padding(innerPadding)
                 .padding(16.dp)
         ) {
-            Image(
-                painter = painterResource(R.mipmap.ic_launcher_foreground),
-                contentDescription = stringResource(R.string.app_icon_desc),
-                modifier = Modifier.size(200.dp)
-            )
+            AnimatedAppIcon()
+            Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = stringResource(R.string.welcome_message),
                 style = MaterialTheme.typography.headlineMedium
