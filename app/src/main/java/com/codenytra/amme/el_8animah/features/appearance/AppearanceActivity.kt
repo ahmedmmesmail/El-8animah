@@ -76,14 +76,12 @@ class AppearanceActivity : ComponentActivity() {
 
             El8animahTheme {
                AppearanceScreen(
-                    // بنبعت الـ state من الـ VM مباشرة للـ screen
+                    // Pass reactive state directly from Application-level ThemeViewModel
                     themeMode = vm.themeMode,
                     dynamicColor = vm.dynamicColor,
                     blackTheme = vm.blackTheme,
                     seedColor = vm.seedColor,
-                    // الـ callbacks بتكتب في الـ VM مباشرة
-                    // الـ VM بيحفظ في SharedPreferences ويغيّر الـ state
-                    // الـ state تتغير → Compose يعيد رسم كل حاجة بتقراها
+                    // Updates mutate ThemeViewModel state and persist to SharedPreferences
                     onThemeModeChange = { vm.updateThemeMode(it) },
                     onDynamicColorChange = { vm.updateDynamicColor(it) },
                     onBlackThemeChange = { vm.updateBlackTheme(it) },
@@ -134,7 +132,7 @@ fun AppearanceScreen(
     onNavigateBack: () -> Unit = {}
 ) {
 
-    // هل الجهاز بيدعم Dynamic Color؟ Android 12+ فقط
+    // Dynamic color (Material You wallpaper extraction) requires Android 12+ (API 31+)
     val supportsDynamicColor = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
     Scaffold(
@@ -173,7 +171,7 @@ fun AppearanceScreen(
                     ) {
                         Icon(
                             Icons.AutoMirrored.Rounded.ArrowBackIos,
-                            contentDescription = "Back",
+                            contentDescription = stringResource(R.string.back),
                             modifier = Modifier.size(18.dp).clip(MaterialTheme.shapes.medium)
                         )
                     }
@@ -589,13 +587,11 @@ private fun ColorCircle(
                 .background(color),
             contentAlignment = Alignment.Center
         ) {
-            // لو selected = علامة صح جوا الدايرة
             if (isSelected) {
                 Icon(
                     Icons.Rounded.Check,
                     contentDescription = null,
-                    // لون العلامة بيكون أبيض أو أسود حسب luminance اللون
-                    // luminance() = بيقيس مدى إضاءة اللون (0 = أسود، 1 = أبيض)
+                    // Use luminance (0.0=black to 1.0=white) to guarantee visible checkmark contrast
                     tint = if (color.luminance() > 0.5f) Color.Black else Color.White,
                     modifier = Modifier.size(20.dp)
                 )

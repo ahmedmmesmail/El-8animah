@@ -21,6 +21,7 @@ import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
 import kotlin.system.exitProcess
 
+// Utility to backup and restore app data (SharedPreferences & Databases) to/from compressed .8animah zip files
 object ZipUtils {
 
     private const val TAG = "ZipUtils"

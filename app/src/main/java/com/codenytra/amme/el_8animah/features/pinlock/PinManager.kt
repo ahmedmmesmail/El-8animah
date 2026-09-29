@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.core.content.edit
 import java.security.MessageDigest
 
+// Manages persistent PIN storage and SHA-256 hash verification in SharedPreferences
 object PinManager {
 
     private const val PIN_KEY = "pin"

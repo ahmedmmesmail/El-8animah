@@ -7,10 +7,10 @@ android {
     namespace = "com.codenytra.amme.el_8animah"
     compileSdk = 37
 
-//    donot forget to add this to use build config
-//    this helps you to get the id and current version of the app
+// Enable buildConfig to access BuildConfig.VERSION_NAME and applicationId in Kotlin code
     buildFeatures {
         buildConfig = true
+        compose = true
     }
 
     defaultConfig {
@@ -34,19 +34,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    buildFeatures {
-        compose = true
-    }
 }
-// add..
+
+// Target Java 17 bytecode for Kotlin compiler
 kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
-//
 
 dependencies {
+    // Core Compose Bill of Materials (BOM) and runtime dependencies
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
@@ -56,7 +54,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
-//    added (don't forget to add this to libs.versions.toml)
+    // Feature dependencies configured in gradle/libs.versions.toml
     implementation(libs.androidx.compose.material3.adaptive.navigation.suite)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.appcompat)
@@ -65,7 +63,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.compose.animation)
     implementation(libs.androidx.biometric)
-//
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -74,5 +71,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
-
 }

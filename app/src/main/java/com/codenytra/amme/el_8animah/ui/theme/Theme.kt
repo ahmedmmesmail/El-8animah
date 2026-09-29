@@ -20,7 +20,9 @@ import com.codenytra.amme.el_8animah.features.appearance.ThemeMode
 import com.materialkolor.dynamiccolor.ColorSpec
 import com.materialkolor.rememberDynamicColorScheme
 
-// ---------- Dark ----------
+// ---------- adjust this file according to your theme ----------
+
+
 private val DarkColorScheme = darkColorScheme(
     primary = LightGold,
     onPrimary = Color(0xFF1C1C1C),
@@ -46,7 +48,6 @@ private val DarkColorScheme = darkColorScheme(
     outline = Color(0xFF8A8A8A)
 )
 
-// ---------- Light ----------
 private val LightColorScheme = lightColorScheme(
     primary = Tangerine,
     onPrimary = Color(0xFF1C1C1C),
@@ -74,21 +75,11 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun El8animahTheme(
-    // مش محتاج parameters تاني
-    // بياخد البيانات من ThemeViewModel مباشرة
     content: @Composable () -> Unit
 ) {
-    // ─── نقرأ من ThemeViewModel ──────────────────────────
-    // DeTauroApplication.instance = الـ Application singleton
-    // .themeViewModel = الـ ViewModel الوحيد في التطبيق
-    //
-    // لما الـ ViewModel state يتغير (في AppearanceActivity مثلاً)
-    // Compose يلاحظ التغيير ويعيد رسم أي composable بيقرأ من الـ state دي
-    // ── حتى لو كانت في Activity مختلفة تماماً ──
+    // Read reactive state directly from global ThemeViewModel singleton
     val vm = ElGhanimahApp.instance.themeViewModel
 
-    // بنقرأ الـ state من الـ VM — الـ properties دي Compose State
-    // يعني Compose مسجّل عليها ومنتظر أي تغيير
     val systemDark  = isSystemInDarkTheme()
     val darkTheme = when (vm.themeMode) {
         ThemeMode.SYSTEM -> systemDark
@@ -99,7 +90,7 @@ fun El8animahTheme(
     val blackTheme   = vm.blackTheme
     val seedColor    = vm.seedColor ?: Color.White
 
-    // ─── نبني الـ color scheme ───────────────────────────
+    // Build base Material 3 color scheme
     val context = LocalContext.current
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ->
@@ -108,7 +99,7 @@ fun El8animahTheme(
         else      -> LightColorScheme
     }
 
-    // ─── Status bar ──────────────────────────────────────
+    // Configure status bar icons for light/dark background contrast
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
@@ -119,12 +110,10 @@ fun El8animahTheme(
 
     CustomColors.black = blackTheme && darkTheme
 
-    // ─── rememberDynamicColorScheme من materialkolor ─────
-    // بيبني color scheme من seed color واحد
-    // كل ما seedColor أو darkTheme يتغير → بيعيد الحساب
+    // Dynamically generates a complete Material 3 palette from a single seed color (via material-kolor)
     val dynamicColorScheme = rememberDynamicColorScheme(
         seedColor = when (seedColor) {
-            Color.White -> colorScheme.primary  // مش في لون مختار = الـ primary الافتراضي
+            Color.White -> colorScheme.primary
             else        -> seedColor
         },
         isDark = darkTheme,
@@ -133,9 +122,7 @@ fun El8animahTheme(
         isAmoled = blackTheme && darkTheme
     )
 
-    // ─── اختيار الـ scheme النهائي ───────────────────────
-    // لو مفيش seed color مختار ومش black theme = نستخدم الـ static scheme
-    // غير كده = نستخدم الـ dynamic scheme المبني من الـ seed
+    // Fall back to static color scheme if default color is active and not pure black AMOLED mode
     val scheme = if (seedColor == Color.White && !(blackTheme && darkTheme))
         colorScheme
     else

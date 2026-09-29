@@ -40,6 +40,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // If a PIN is configured and this launch wasn't unlocked yet, redirect to PinLockActivity
         if (PinManager.hasPinSet(this) &&
             !intent.getBooleanExtra(PinLockActivity.EXTRA_PIN_VERIFIED, false)) {
             startActivity(Intent(this, PinLockActivity::class.java))
@@ -47,6 +48,7 @@ class MainActivity : BaseActivity() {
             return
         }
 
+        // Enables modern edge-to-edge drawing under status and navigation bars
         enableEdgeToEdge()
         setContent {
             El8animahTheme {
@@ -81,7 +83,7 @@ fun HomeScreen() {
                     }) {
                         Icon(
                             imageVector = Icons.Rounded.Settings,
-                            contentDescription = "Settings"
+                            contentDescription = stringResource(R.string.settings_title)
                         )
                     }
                 },
@@ -98,15 +100,15 @@ fun HomeScreen() {
         ) {
             Image(
                 painter = painterResource(R.mipmap.ic_launcher_foreground),
-                contentDescription = "App icon",
+                contentDescription = stringResource(R.string.app_icon_desc),
                 modifier = Modifier.size(200.dp)
             )
             Text(
-                text = "Welcome to El-8animah!",
+                text = stringResource(R.string.welcome_message),
                 style = MaterialTheme.typography.headlineMedium
             )
             Text(
-                text = "this a tutorial cookbook app for Android developers.",
+                text = stringResource(R.string.app_desc),
             )
         }
     }

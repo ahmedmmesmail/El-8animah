@@ -31,12 +31,9 @@ The project is designed to grow over time as new Android development patterns an
 ---
 ## Tasks
 
- - adjust themes for the appearance screen
- - implement about activity
- - implement privacy policy
- - implement icon changing
  - add more languages
  - add documentation for each feature
+ - implement auth screens
 
 
 ---
@@ -46,11 +43,38 @@ The project is designed to grow over time as new Android development patterns an
 
 * Settings Screen
 * About Screen
-* Appearance / Theme
-* Forms
-* Dialogs
-* Bottom Sheets
-* Empty States
+* Appearance / Theme Screen
+
+### 🔒 Pin lock
+
+* pin setup
+* pin verification
+* biometrics authentication
+
+### 🌍 Localization
+
+* Multiple Languages
+* RTL Support
+* Dynamic Language Selection
+* String Resources
+* Localization Best Practices
+
+### 🔃 Data backup & restore
+
+* Backup all app data & preferences to a file
+* Restore data from file
+* File encryption with specific extension
+
+### 🎨 Theme & Color customization
+
+* Dynamic Colors
+* choosing between seed colors
+* switching between light & dark themes
+* solid black mode
+
+---
+
+## 🗺️ Coming Features
 
 ### 🔐 Authentication
 
@@ -68,13 +92,6 @@ The project is designed to grow over time as new Android development patterns an
 * Notification Actions
 * Deep Links from Notifications
 
-### 🌍 Localization
-
-* Multiple Languages
-* RTL Support
-* Dynamic Language Selection
-* String Resources
-* Localization Best Practices
 
 ### 📁 File Handling
 
@@ -83,96 +100,6 @@ The project is designed to grow over time as new Android development patterns an
 * File Validation
 * File Management
 
-### 📄 Data
-
-* Pagination
-* API Integration
-* Loading States
-* Error Handling
-* Caching
-* Offline-first approaches
-
-### 🛠️ Developer Utilities
-
-* Logging
-* Validation
-* Error Handling
-* Debugging
-* Reusable Utilities
-
----
-
-## 🗺️ TODO
-
-### Core
-
-* [ ] Project architecture
-* [ ] Navigation structure
-* [x] Common UI components
-* [ ] Common error handling
-* [ ] Loading states
-* [ ] Empty states
-
-### UI
-
-* [x] Settings Screen
-* [ ] About Screen
-* [ ] Appearance
-* [ ] Forms
-* [ ] Dialogs
-* [ ] Bottom Sheets
-* [ ] Input Components
-* [ ] Validation
-
-### Authentication
-
-* [ ] Login
-* [ ] Register
-* [ ] Logout
-* [ ] Session Management
-* [ ] Authentication State
-
-### Android
-
-* [ ] Notifications
-* [ ] Permissions
-* [ ] Deep Links
-* [ ] Background Tasks
-* [ ] File Upload
-* [ ] File Picker
-
-### Data & Networking
-
-* [ ] Retrofit
-* [ ] API Error Handling
-* [ ] Pagination
-* [ ] Caching
-* [ ] Offline-first
-* [ ] Room Database
-
-### Localization
-
-* [ ] Arabic
-* [x] English
-* [ ] French
-* [x] RTL Support
-* [x] Runtime Language Switching
-
-### Developer Tools
-
-* [ ] Logging
-* [ ] Debug Utilities
-* [ ] Exception Handling
-* [ ] Reusable Helpers
-
-### Documentation
-
-* [ ] Document every recipe
-* [ ] Add implementation examples
-* [ ] Add common mistakes
-* [ ] Add production notes
-* [ ] Add references
-* [ ] Add screenshots where useful
 
 ---
 
@@ -193,13 +120,6 @@ The project is designed to grow over time as new Android development patterns an
 * Repository Pattern
 * Separation of Concerns
 
-### Data & Networking
-
-* Retrofit
-* OkHttp
-* Gson
-* Room
-* DataStore
 
 ### Development Tools
 
@@ -216,14 +136,16 @@ The project is designed to grow over time as new Android development patterns an
 
 Each recipe should contain its own documentation.
 
-Recommended structure:
+structure:
 
 ```text
 features/
+├── README.md
 └── feature-name/
     ├── implementation/
-    ├── README.md
-    └── screenshots/
+    └── README.md
+
+
 ```
 
 Each `README.md` should cover:
@@ -284,36 +206,65 @@ You can then:
 
 ## 📂 Project Structure
 
-```text
-El-8animah/
-│
-├── app/
-│
-├── features/
-│   ├── settings/
-│   ├── about/
-│   ├── appearance/
-│   ├── feedback/
-│   ├── validation/
-│   ├── authentication/
-│   ├── notifications/
-│   ├── localization/
-│   ├── file-upload/
-│   ├── pagination/
-│   └── logging/
-│
-├── core/
-│   ├── ui/
-│   ├── navigation/
-│   ├── network/
-│   └── utils/
-│
-├── docs/
-│   ├── architecture.md
-│   └── roadmap.md
-│
-└── README.md
-```
+[//]: # (```text)
+
+[//]: # (El-8animah/)
+
+[//]: # (│)
+
+[//]: # (├── app/)
+
+[//]: # (│)
+
+[//]: # (├── features/)
+
+[//]: # (│   ├── settings/)
+
+[//]: # (│   ├── about/)
+
+[//]: # (│   ├── appearance/)
+
+[//]: # (│   ├── feedback/)
+
+[//]: # (│   ├── validation/)
+
+[//]: # (│   ├── authentication/)
+
+[//]: # (│   ├── notifications/)
+
+[//]: # (│   ├── localization/)
+
+[//]: # (│   ├── file-upload/)
+
+[//]: # (│   ├── pagination/)
+
+[//]: # (│   └── logging/)
+
+[//]: # (│)
+
+[//]: # (├── core/)
+
+[//]: # (│   ├── ui/)
+
+[//]: # (│   ├── navigation/)
+
+[//]: # (│   ├── network/)
+
+[//]: # (│   └── utils/)
+
+[//]: # (│)
+
+[//]: # (├── docs/)
+
+[//]: # (│   ├── architecture.md)
+
+[//]: # (│   └── roadmap.md)
+
+[//]: # (│)
+
+[//]: # (└── README.md)
+
+[//]: # (```)
 
 ---
 

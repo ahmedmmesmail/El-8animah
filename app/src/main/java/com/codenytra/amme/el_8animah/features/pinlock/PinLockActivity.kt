@@ -31,12 +31,10 @@ import com.codenytra.amme.el_8animah.ui.theme.El8animahTheme
 
 class PinLockActivity : BaseActivity() {
 
-    // ── State مشترك بين الـ Activity والـ Composable ────────
+    // Shared state between FragmentActivity and PinLockScreen Composable
     private val _canUseBiometric = mutableStateOf(false)
 
-    // ── BiometricPrompt — بنبنيها هنا في الـ Activity ───────
-    // "this" هنا = FragmentActivity = صح 100%
-    // مش محتاجين cast ولا LocalContext
+    // BiometricPrompt requires FragmentActivity context (provided by BaseActivity)
     private lateinit var biometricPrompt: BiometricPrompt
     private lateinit var promptInfo: BiometricPrompt.PromptInfo
 
@@ -44,16 +42,13 @@ class PinLockActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // ── نشيك البصمة: شرطين لازم يتحققوا ────────────
-        // 1. الجهاز يدعم البصمة (hardware + مسجلة)
-        // 2. اليوزر وافق على تفعيلها في PinSetupActivity
+        // Check if device hardware supports biometrics and user opted-in during setup
         val deviceSupportsBiometric = BiometricManager.from(this)
             .canAuthenticate(BIOMETRIC_WEAK) == BiometricManager.BIOMETRIC_SUCCESS
         val userEnabledBiometric = PinManager.isBiometricEnabled(this)
         _canUseBiometric.value = deviceSupportsBiometric && userEnabledBiometric
 
-        // ── بناء BiometricPrompt ──────────────────────────
-        // "this" هنا = FragmentActivity مباشرة — لا cast لا مشاكل
+        // Initialize BiometricPrompt with authentication callbacks
         biometricPrompt = BiometricPrompt(
             this,
             ContextCompat.getMainExecutor(this),
@@ -66,13 +61,13 @@ class PinLockActivity : BaseActivity() {
                 }
 
                 override fun onAuthenticationFailed() {
-                    // البصمة غلط — الـ BiometricPrompt بيتعامل مع الـ retries تلقائياً
+                    // Biometric recognition failed; BiometricPrompt handles retries automatically
                 }
 
                 override fun onAuthenticationError(
                     errorCode: Int, errString: CharSequence
                 ) {
-                    // اليوزر ضغط "Use PIN" أو ألغى — نسيبه يكتب PIN يدوياً
+                    // User dismissed prompt or clicked "Use PIN" to enter code manually
                 }
             }
         )
@@ -94,7 +89,7 @@ class PinLockActivity : BaseActivity() {
             }
         }
 
-        // نشغّل البصمة تلقائياً عند فتح الشاشة
+        // Trigger biometric authentication automatically on screen display if enabled
         if (_canUseBiometric.value) {
             biometricPrompt.authenticate(promptInfo)
         }
@@ -104,15 +99,13 @@ class PinLockActivity : BaseActivity() {
         startActivity(
             Intent(this, MainActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                // بنبعت extra عشان MainActivity تعرف إن الـ PIN اتتحقق منه
-                // ومش تشيك تاني وتفتح PinLockActivity في لوب لا نهائي
+                // Pass extra to inform MainActivity that PIN verification has already completed
                 putExtra(EXTRA_PIN_VERIFIED, true)
             }
         )
     }
 
     companion object {
-        // اسم الـ extra — const عشان مش نغلط في الكتابة
         const val EXTRA_PIN_VERIFIED = "pin_verified"
     }
 }

@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.fragment.app.FragmentActivity
 import com.codenytra.amme.el_8animah.features.localization.LocaleHelper
 
+// Inherit from BaseActivity in all Activities to enable dynamic runtime language switching.
+// Extends FragmentActivity which is required by BiometricPrompt in PinLockActivity.
 open class BaseActivity : FragmentActivity() {
 
     private var localeWhenCreated: String? = null

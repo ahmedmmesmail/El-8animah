@@ -2,28 +2,22 @@ package com.codenytra.amme.el_8animah.features.appearance
 
 import android.app.Application
 
+// Custom Application class; must be registered in AndroidManifest.xml as android:name=".features.appearance.ElGhanimahApp"
 class ElGhanimahApp : Application() {
 
-    // lateinit = بنعلن المتغير بس مش بنعطيه قيمة دلوقتي
-    // هيتعمل initialize في onCreate قبل أي Activity تشتغل
+    // App-wide ThemeViewModel instance, accessible by all Activities
     lateinit var themeViewModel: ThemeViewModel
-        private set  // private set = من برا الكلاس يقدروا يقروا بس مش يغيروا
+        private set
 
     override fun onCreate() {
         super.onCreate()
-
-        // بنعمل الـ ViewModel هنا بدل داخل Activity
-        // ليه؟ عشان ThemeViewModel يحتاج ApplicationContext
-        // والـ Application نفسها هي applicationContext
+        // Initialize the singleton ThemeViewModel with the Application context
         themeViewModel = ThemeViewModel(this)
-
-        // نحفظ instance في companion object عشان أي كود يوصله بسهولة
         instance = this
     }
 
     companion object {
-        // instance = مؤشر على الـ Application الحالية
-        // lateinit لأنها بتتعمل في onCreate مش عند التعريف
+        // Global singleton accessor to the Application instance
         lateinit var instance: ElGhanimahApp
             private set
     }

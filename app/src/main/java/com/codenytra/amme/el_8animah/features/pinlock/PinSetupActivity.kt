@@ -331,9 +331,7 @@ fun PinDotsIndicator(filledCount: Int) {
     }
 }
 
-// ============================================================
-// PIN KEYPAD — نفس ما كان
-// ============================================================
+// Numeric keypad for entering and modifying 4-digit PINs
 @Composable
 fun PinKeypad(onDigit: (String) -> Unit, onDelete: () -> Unit) {
     val rows = listOf(
@@ -357,7 +355,7 @@ fun PinKeypad(onDigit: (String) -> Unit, onDelete: () -> Unit) {
                                 IconButton(onClick = onDelete, modifier = Modifier.size(72.dp)) {
                                     Icon(
                                         Icons.AutoMirrored.Rounded.Backspace,
-                                        contentDescription = "Delete",
+                                        contentDescription = stringResource(R.string.delete),
                                         modifier = Modifier.size(24.dp),
                                         tint = MaterialTheme.colorScheme.onSurface
                                     )

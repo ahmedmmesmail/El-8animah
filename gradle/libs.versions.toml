@@ -7,7 +7,7 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.11.0"
 activityCompose = "1.13.0"
 
-#added
+# Feature dependencies (Dynamic Theming, Navigation, Biometrics, and Locale)
 materialKolor = "5.0.1"
 navigationCompose = "2.10.1"
 biometric = "1.1.0"
@@ -32,17 +32,26 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 
-#added
+# Responsive navigation bar/rail for different screen sizes
 androidx-compose-material3-adaptive-navigation-suite = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite" }
+# Biometric prompt (fingerprint/face); requires USE_BIOMETRIC permission in AndroidManifest.xml
 androidx-biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+# Jetpack Compose Navigation for screen-to-screen routing
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+# Generates Material 3 color palettes dynamically from a seed color
 material-kolor = { group = "com.materialkolor", name = "material-kolor", version.ref = "materialKolor" }
+# Full catalog of Material Design icons (e.g., Settings, Fingerprint, Lock)
 androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
+# Animation primitives and transitions in Jetpack Compose
 androidx-compose-animation = { group = "androidx.compose.animation", name = "animation" }
+# Used by BaseActivity (FragmentActivity) for runtime locale switching
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+# Provides viewModel() composable to bind ViewModels within Compose screens
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
 
 [plugins]
+# Core Android Application Gradle plugin
 android-application = { id = "com.android.application", version.ref = "agp" }
+# Kotlin compiler plugin for Jetpack Compose support
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 

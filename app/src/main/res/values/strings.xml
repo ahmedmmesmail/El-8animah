@@ -111,11 +111,37 @@
     <string name="color_lime">Lime</string>
 
     <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="app_icon_desc">App Icon</string>
+    <string name="no_app_to_open_link">No app available to open this link.</string>
     <string name="title_activity_pin_lock">PinLockActivity</string>
     <string name="title_activity_our_apps">OurAppsActivity</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_appearance">AppearanceActivity</string>
     <string name="color_red">Red</string>
+    <string name="app_desc">A practical cookbook app containing reusable implementations and solutions for Android developers.</string>
+    <string name="welcome_message">Welcome to El-8animah!</string>
 
+    <!-- About Screen -->
+    <string name="about_title">About</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">App Developer &amp; Software Engineer</string>
+    <string name="about_dev_bio">Passionate Android developer who loves building simple, practical, and beautiful apps.</string>
+    <string name="about_dev_header">About Developer</string>
+    <string name="about_contact_me">Get in Touch</string>
+    <string name="about_contact_email">Email</string>
+    <string name="about_contact_portfolio">Portfolio</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">LinkedIn</string>
+    <string name="about_made_with">Made with </string>
+    <string name="about_in_egypt"> in Egypt</string>
 
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in</string>
+    <string name="app_motmaan_desc">Your daily companion for worship: prayer times and Adhan, Adhkar, the Holy Quran, and a digital prayer beads counter.</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">Discover trending, popular, and top-rated movies with beautiful visuals and smart search.</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">Stay focused and control your screen time by blocking apps and sites, with full respect for your privacy.</string>
 </resources>

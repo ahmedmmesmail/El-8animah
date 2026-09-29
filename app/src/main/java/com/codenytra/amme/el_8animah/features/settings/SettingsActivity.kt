@@ -65,6 +65,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.codenytra.amme.el_8animah.BaseActivity
 import com.codenytra.amme.el_8animah.BuildConfig
 import com.codenytra.amme.el_8animah.R
+import com.codenytra.amme.el_8animah.features.AboutActivity
 import com.codenytra.amme.el_8animah.features.OurAppsActivity
 import com.codenytra.amme.el_8animah.features.appearance.AppearanceActivity
 import com.codenytra.amme.el_8animah.features.backup.BackupResultDialog
@@ -104,7 +105,7 @@ class SettingsActivity : BaseActivity() {
                             },
                             navigationIcon = {
                                 IconButton(onClick = { finish() }) {
-                                    Icon(Icons.AutoMirrored.Rounded.ArrowBackIos, contentDescription = "Back")
+                                    Icon(Icons.AutoMirrored.Rounded.ArrowBackIos, contentDescription = stringResource(R.string.back))
                                 }
                             },
                             colors = topAppBarColors(containerColor = MaterialTheme.colorScheme.surface)
@@ -415,13 +416,29 @@ fun SettingsScreen(
                         icon = Icons.Rounded.Policy,
                         title = stringResource(R.string.settings_privacy_policy),
                         subtitle = stringResource(R.string.settings_privacy_policy_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON,
+                        onClick = {
+                            context.startActivity(
+                                Intent(
+                                    Intent.ACTION_VIEW,
+                                    "https://ahmedmmesmail.me/El-8animah_privacy-policy".toUri()
+                                ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            )
+                        }
                     ),
                     SettingItem(
                         icon = Icons.Rounded.Info,
                         title = stringResource(R.string.settings_about),
                         subtitle = stringResource(R.string.settings_about_desc),
-                        trailing = SettingsTrailing.CHEVRON
+                        trailing = SettingsTrailing.CHEVRON,
+                        onClick = {
+                            context.startActivity(
+                                Intent(
+                                    context,
+                                    AboutActivity::class.java
+                                )
+                            )
+                        }
                     )
                 )
             )

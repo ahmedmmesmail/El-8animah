@@ -7,9 +7,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.AndroidViewModel
 
+// Holds reactive Compose state for theme preferences; changes trigger UI recomposition app-wide
 class ThemeViewModel(application: Application) : AndroidViewModel(application) {
 
-    // ─── Theme State ──────────────────────────────────────
+    // ─── Theme State (Observable by Compose) ──────────────
     var themeMode by mutableStateOf(ThemePreferences.getThemeMode(application))
         private set
 

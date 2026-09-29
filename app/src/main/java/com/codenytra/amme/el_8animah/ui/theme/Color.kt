@@ -11,6 +11,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
+// Custom brand color palette tokens
 val LightGold = Color(0xFFFFD54F)
 val SandyYellow = Color(0xFFFFF176)
 val Blueberry = Color(0xFF4F378B)
@@ -19,7 +20,7 @@ val Peach = Color(0xFFFAA781)
 val LightBlue = Color(0xFF00BFFF)
 val LightBlue2 = Color(0xFF81D4FA)
 
-
+// Provides component-specific color schemes that adapt when pure AMOLED black theme is active
 object CustomColors {
     var black = false
 

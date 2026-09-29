@@ -11,6 +11,7 @@ enum class ThemeMode {
     DARK
 }
 
+// Manages persistent storage of theme preferences using SharedPreferences
 object ThemePreferences {
     private const val PREFS_NAME = "theme_prefs"
 

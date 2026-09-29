@@ -11,6 +11,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+// Groups a category header and a list of SettingItem rows into a visual section
 @Composable
 fun SettingsSection(
     header: String,

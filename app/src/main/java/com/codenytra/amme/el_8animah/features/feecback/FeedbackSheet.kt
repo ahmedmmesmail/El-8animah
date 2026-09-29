@@ -129,6 +129,7 @@ fun FeedbackDialog(onDismiss: () -> Unit) {
                     Button(
                         onClick = {
                             val feedbackType = context.getString(types[selectedType])
+                            // Uses ACTION_SENDTO with 'mailto:' to launch dedicated email client apps directly
                             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                                 data = email.toUri()
                                 putExtra(Intent.EXTRA_SUBJECT,

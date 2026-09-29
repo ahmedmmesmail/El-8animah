@@ -37,7 +37,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -74,7 +73,7 @@ class OurAppsActivity : ComponentActivity() {
                             },
                             navigationIcon = {
                                 IconButton(onClick = { finish() }) {
-                                    Icon(Icons.AutoMirrored.Rounded.ArrowBackIos, contentDescription = "Back")
+                                    Icon(Icons.AutoMirrored.Rounded.ArrowBackIos, contentDescription = stringResource(R.string.back))
                                 }
                             },
                             colors = topAppBarColors(containerColor = MaterialTheme.colorScheme.surface)
@@ -92,8 +91,8 @@ class OurAppsActivity : ComponentActivity() {
 }
 
 data class App(
-    val name: String,
-    val description: String,
+    val nameRes: Int,
+    val descriptionRes: Int,
     val icon: Int,
     val id: String
 )
@@ -103,20 +102,20 @@ fun OurAppsScreen(modifier: Modifier = Modifier) {
 
     val apps: List<App> = listOf(
         App(
-            name = "Mutma'in",
-            description = "Your daily companion for worship: prayer times and Adhan, Adhkar, the Holy Quran, and a digital prayer beads counter.",
+            nameRes = R.string.app_motmaan_name,
+            descriptionRes = R.string.app_motmaan_desc,
             icon = R.drawable.motmaan,
             id = "com.codenytra.amme.motmaan"
         ),
         App(
-            name = "CineMeteor",
-            description = "Discover trending, popular, and top-rated movies with beautiful visuals and smart search.",
+            nameRes = R.string.app_cinemeteor_name,
+            descriptionRes = R.string.app_cinemeteor_desc,
             icon = R.drawable.cinemeteor,
             id = "com.acms.cinemeteor"
         ),
         App(
-            name = "DeTauro",
-            description = "Stay focused and control your screen time by blocking apps and sites, with full respect for your privacy.",
+            nameRes = R.string.app_detauro_name,
+            descriptionRes = R.string.app_detauro_desc,
             icon = R.drawable.detauro,
             id = "com.codenytra.amme.detauro"
         ),
@@ -130,8 +129,8 @@ fun OurAppsScreen(modifier: Modifier = Modifier) {
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 apps.forEachIndexed { index, app ->
                     AppRow(
-                        name = app.name,
-                        description = app.description,
+                        nameRes = app.nameRes,
+                        descriptionRes = app.descriptionRes,
                         icon = app.icon,
                         id = app.id,
                         isTop = index == 0,
@@ -153,14 +152,15 @@ fun OurAppsScreenPreview() {
 
 @Composable
 fun AppRow(
-    name: String,
-    description: String,
+    nameRes: Int,
+    descriptionRes: Int,
     icon: Int,
     id: String,
     isTop: Boolean = false,
     isBottom: Boolean = false,
     context: Context = LocalContext.current
 ) {
+    // Dynamically shapes corners to visually group list items into cohesive cards
     val shape = RoundedCornerShape(
         topStart = if (isTop) 18.dp else 4.dp,
         topEnd = if (isTop) 18.dp else 4.dp,
@@ -175,6 +175,7 @@ fun AppRow(
             .fillMaxWidth()
             .clip(shape)
             .clickable(onClick = {
+                // Opens the app page on Google Play Store via standard package URL
                 context.startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
@@ -199,7 +200,7 @@ fun AppRow(
             ) {
                 Image(
                     painter = painterResource(icon),
-                    contentDescription = name,
+                    contentDescription = stringResource(nameRes),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxSize()
@@ -214,18 +215,17 @@ fun AppRow(
                 verticalArrangement = Arrangement.spacedBy(2.dp)
             ) {
                 Text(
-                    text = name,
+                    text = stringResource(nameRes),
                     style = MaterialTheme.typography.bodyLarge,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurface
                 )
-                if (description.isNotEmpty()) {
-                    Text(
-                        text = description,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+                Text(
+                    text = stringResource(descriptionRes),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
             }
 
             Spacer(modifier = Modifier.padding(start = 8.dp))
@@ -239,4 +239,3 @@ fun AppRow(
 
         }
     }
-}

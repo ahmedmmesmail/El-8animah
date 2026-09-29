@@ -26,12 +26,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
+// Renders an individual setting row with dynamic corner rounding based on list position
 @Composable
 fun SettingsRow(
     item: SettingItem,
     isTop: Boolean = false,
     isBottom: Boolean = false
 ) {
+    // Calculates rounded edges for top and bottom items to form a unified card section
     val shape = RoundedCornerShape(
         topStart = if (isTop) 18.dp else 4.dp,
         topEnd = if (isTop) 18.dp else 4.dp,
