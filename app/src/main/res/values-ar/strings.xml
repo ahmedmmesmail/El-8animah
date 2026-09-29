@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الغنيمة</string>
+    <string name="title_activity_settings">الإعدادات</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_section_general">عام</string>
+    <string name="settings_appearance">المظهر</string>
+    <string name="settings_appearance_desc">السمة والألوان وطريقة العرض</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_language_desc">تغيير لغة عرض التطبيق</string>
+    <string name="settings_notifications">الإشعارات</string>
+    <string name="settings_notifications_desc">تلقي تنبيهات حول نشاط التطبيق</string>
+    <string name="settings_our_apps">تطبيقاتنا</string>
+    <string name="settings_our_apps_desc">تصفح باقي تطبيقاتنا المميزة</string>
+    <string name="settings_pin_lock">قفل برمز PIN</string>
+    <string name="settings_pin_lock_desc">طلب رمز PIN للدخول إلى التطبيق</string>
+    <string name="settings_admin_device">مسؤول الجهاز</string>
+    <string name="settings_section_data">البيانات والنسخ الاحتياطي</string>
+    <string name="settings_backup">نسخ احتياطي للإعدادات</string>
+    <string name="settings_backup_desc">تصدير إعداداتك إلى ملف</string>
+    <string name="settings_restore">استعادة الإعدادات</string>
+    <string name="settings_restore_desc">استيراد الإعدادات من ملف نسخ احتياطي</string>
+    <string name="settings_reset">إعادة ضبط جميع الإعدادات</string>
+    <string name="settings_reset_desc">مسح كافة الإعدادات والبدء من جديد</string>
+    <string name="settings_reset_confirm">هل أنت متأكد من رغبتك في إعادة ضبط كل شيء؟</string>
+    <string name="settings_reset_confirm_yes">إعادة ضبط</string>
+    <string name="settings_reset_confirm_no">إلغاء</string>
+    <string name="settings_section_support">الدعم والمساعدة</string>
+    <string name="settings_section_about">حول التطبيق</string>
+    <string name="settings_version">الإصدار</string>
+    <string name="settings_privacy_policy">سياسة الخصوصية</string>
+    <string name="settings_privacy_policy_desc">قراءة سياسة الخصوصية الخاصة بنا</string>
+    <string name="settings_rate_app">تقييم الغنيمة</string>
+    <string name="settings_rate_app_desc">هل يعجبك التطبيق؟ اترك لنا تقييماً</string>
+    <string name="settings_share_app">مشاركة الغنيمة</string>
+    <string name="settings_share_app_desc">رشح التطبيق لأصدقائك</string>
+    <string name="settings_feedback">إرسال ملاحظات</string>
+    <string name="settings_feedback_desc">الإبلاغ عن مشكلة أو اقتراح ميزة جديدة</string>
+    <string name="settings_about">عن الغنيمة</string>
+    <string name="settings_about_desc">تعرف على مطور التطبيق</string>
+    <string name="feedback_title">إرسال ملاحظات</string>
+    <string name="feedback_type_bug">إبلاغ عن خطأ</string>
+    <string name="feedback_type_feature">طلب ميزة</string>
+    <string name="feedback_type_other">أخرى</string>
+    <string name="feedback_message_hint">اكتب ملاحظاتك أو رسالتك هنا…</string>
+    <string name="feedback_send">إرسال</string>
+    <string name="feedback_cancel">إلغاء</string>
+    <string name="feedback_type_label">النوع</string>
+    <string name="settings_language_system">تلقائي (لغة الجهاز)</string>
+    <string name="auto">تلقائي</string>
+
+    <!-- Backup -->
+    <string name="backup_success">تم حفظ النسخة الاحتياطية في:\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">فشل النسخ الاحتياطي. يرجى المحاولة مرة أخرى.</string>
+    <string name="backup_permission_required">يلزم إذن التخزين لحفظ النسخ الاحتياطية.</string>
+    <string name="ok">حسناً</string>
+    <string name="settings_share">مشاركة</string>
+    <string name="check_out">ألقِ نظرة على تطبيق الغنيمة!</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">تعيين رمز PIN</string>
+    <string name="set_pin">تعيين رمز PIN</string>
+    <string name="change_pin">تغيير رمز PIN</string>
+    <string name="pin_step_verify">أدخل رمز PIN الحالي</string>
+    <string name="pin_step_enter">أدخل رمز PIN الجديد</string>
+    <string name="pin_step_confirm">تأكيد رمز PIN الجديد</string>
+    <string name="pin_error_mismatch">الرموز غير متطابقة. أعد الإدخال.</string>
+    <string name="pin_error_incorrect">رمز PIN غير صحيح. حاول مرة أخرى.</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">تفعيل الفتح بالبصمة؟</string>
+    <string name="biometric_setup_description">استخدم بصمة الإصبع أو الوجه لفتح التطبيق بدلاً من إدخال رمز PIN في كل مرة.</string>
+    <string name="biometric_setup_skip">تخطي، استخدام PIN فقط</string>
+    <string name="biometric_setup_enable">تفعيل البصمة</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">استخدام البصمة / الوجه</string>
+    <string name="enter_pin">أدخل رمز PIN للمتابعة</string>
+    <string name="incorrect_pin">رمز PIN غير صحيح. حاول مرة أخرى.</string>
+    <string name="biometric_subtitle">استخدم بصمة الإصبع أو الوجه لإلغاء القفل</string>
+    <string name="use_pin_instead">استخدام رمز PIN بدلاً من ذلك</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">المظهر</string>
+    <string name="appearance_settings_label">الإعدادات المرئية</string>
+    <string name="appearance_theme_label">وضع السمة</string>
+    <string name="appearance_theme_system">تلقائي مع النظام</string>
+    <string name="appearance_theme_light">فاتح</string>
+    <string name="appearance_theme_dark">داكن</string>
+    <string name="appearance_dynamic_color">الألوان الديناميكية</string>
+    <string name="appearance_dynamic_color_desc">تطبيق ألوان النظام (أندرويد 12+)</string>
+    <string name="appearance_color_scheme">نظام الألوان</string>
+    <string name="appearance_color_dynamic">ديناميكي</string>
+    <string name="appearance_color_default">الافتراضي</string>
+    <string name="appearance_color_custom">مخصص (%1$s)</string>
+    <string name="appearance_black_theme">الأسود الداكن (OLED)</string>
+    <string name="appearance_black_theme_desc">أسود عميق لشاشات OLED وتوفير الطاقة</string>
+
+    <string name="color_chartreuse">شارتريوز</string>
+    <string name="color_yellow">أصفر</string>
+    <string name="color_amber">كهرماني</string>
+    <string name="color_orange">برتقالي</string>
+    <string name="color_soft_red">أحمر هادئ</string>
+    <string name="color_pink">وردي</string>
+    <string name="color_purple">أرجواني</string>
+    <string name="color_indigo">نيلي</string>
+    <string name="color_blue">أزرق</string>
+    <string name="color_cyan">سماوي</string>
+    <string name="color_teal">سماوي داكن (Teal)</string>
+    <string name="color_green">أخضر</string>
+    <string name="color_lime">ليموني</string>
+
+    <string name="cancel">إلغاء</string>
+    <string name="back">رجوع</string>
+    <string name="delete">حذف</string>
+    <string name="app_icon_desc">أيقونة التطبيق</string>
+    <string name="no_app_to_open_link">لا يوجد تطبيق متاح لفتح هذا الرابط.</string>
+    <string name="title_activity_pin_lock">شاشة القفل</string>
+    <string name="title_activity_our_apps">تطبيقاتنا</string>
+    <string name="title_activity_about">عن التطبيق</string>
+    <string name="title_activity_appearance">تخصيص المظهر</string>
+    <string name="color_red">أحمر</string>
+    <string name="app_desc">تطبيق مرجعي وعملي يضم حلولاً ونماذج برمجية جاهزة وقابلة لإعادة الاستخدام لمطوري أندرويد.</string>
+    <string name="welcome_message">مرحباً بك في تطبيق الغنيمة!</string>
+
+    <!-- About Screen -->
+    <string name="about_title">عن التطبيق</string>
+    <string name="about_dev_name">أحمد محمد إسماعيل</string>
+    <string name="about_dev_title">مطور تطبيقات ومهندس برمجيات</string>
+    <string name="about_dev_bio">مطور أندرويد شغوف بابتكار تطبيقات بسيطة وعملية وتتميز بتصميم أنيق وتجربة مستخدم ممتازة.</string>
+    <string name="about_dev_header">عن المطور</string>
+    <string name="about_contact_me">تواصل معي</string>
+    <string name="about_contact_email">البريد الإلكتروني</string>
+    <string name="about_contact_portfolio">موقعي الشخصي</string>
+    <string name="about_contact_github">جيت هاب</string>
+    <string name="about_contact_linkedin">لينكد إن</string>
+    <string name="about_made_with">صُنع بـ </string>
+    <string name="about_in_egypt"> في مصر</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">مُطمَئِنّ</string>
+    <string name="app_motmaan_desc">رفيقك اليومي للعبادة: مواقيت الصلاة والأذان، الأذكار، القرآن الكريم، ومسبحة إلكترونية متطورة.</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">اكتشف الأفلام الرائجة والشائعة والأعلى تقييماً بتصميم بصري جذاب وبحث ذكي.</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">حافظ على تركيزك وتحكم في وقت استخدام الشاشة بحظر التطبيقات والمواقع، مع احترام تام للخصوصية.</string>
+</resources>

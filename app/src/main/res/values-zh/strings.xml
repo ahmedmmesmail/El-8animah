@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-8animah</string>
+    <string name="title_activity_settings">设置</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">设置</string>
+    <string name="settings_section_general">常规</string>
+    <string name="settings_appearance">外观</string>
+    <string name="settings_appearance_desc">主题、色彩与显示</string>
+    <string name="settings_language">语言</string>
+    <string name="settings_language_desc">更改应用显示语言</string>
+    <string name="settings_notifications">通知</string>
+    <string name="settings_notifications_desc">接收应用活动提醒</string>
+    <string name="settings_our_apps">我们的应用</string>
+    <string name="settings_our_apps_desc">查看我们开发的其他精品应用</string>
+    <string name="settings_pin_lock">PIN 码锁定</string>
+    <string name="settings_pin_lock_desc">进入应用时需要输入 PIN 码</string>
+    <string name="settings_admin_device">设备管理器</string>
+    <string name="settings_section_data">数据与备份</string>
+    <string name="settings_backup">备份设置</string>
+    <string name="settings_backup_desc">将设置导出到文件</string>
+    <string name="settings_restore">恢复设置</string>
+    <string name="settings_restore_desc">从备份文件导入设置</string>
+    <string name="settings_reset">重置所有设置</string>
+    <string name="settings_reset_desc">清除所有设置并恢复默认</string>
+    <string name="settings_reset_confirm">您确定要重置所有设置吗？</string>
+    <string name="settings_reset_confirm_yes">重置</string>
+    <string name="settings_reset_confirm_no">取消</string>
+    <string name="settings_section_support">支持与帮助</string>
+    <string name="settings_section_about">关于</string>
+    <string name="settings_version">版本</string>
+    <string name="settings_privacy_policy">隐私政策</string>
+    <string name="settings_privacy_policy_desc">阅读我们的隐私政策</string>
+    <string name="settings_rate_app">为 El-8animah 评分</string>
+    <string name="settings_rate_app_desc">喜欢这款应用？欢迎留下好评</string>
+    <string name="settings_share_app">分享 El-8animah</string>
+    <string name="settings_share_app_desc">向朋友推荐 El-8animah</string>
+    <string name="settings_feedback">发送反馈</string>
+    <string name="settings_feedback_desc">反馈问题或提出功能建议</string>
+    <string name="settings_about">关于 El-8animah</string>
+    <string name="settings_about_desc">了解应用的开发者</string>
+    <string name="feedback_title">发送反馈</string>
+    <string name="feedback_type_bug">问题反馈</string>
+    <string name="feedback_type_feature">功能建议</string>
+    <string name="feedback_type_other">其他</string>
+    <string name="feedback_message_hint">在此描述您的反馈内容…</string>
+    <string name="feedback_send">发送</string>
+    <string name="feedback_cancel">取消</string>
+    <string name="feedback_type_label">类型</string>
+    <string name="settings_language_system">跟随系统</string>
+    <string name="auto">自动</string>
+
+    <!-- Backup -->
+    <string name="backup_success">备份已保存至：\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">备份失败，请重试。</string>
+    <string name="backup_permission_required">保存备份需要存储权限。</string>
+    <string name="ok">确定</string>
+    <string name="settings_share">分享</string>
+    <string name="check_out">快来体验 El-8animah 应用！</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">设置 PIN 码</string>
+    <string name="set_pin">设置 PIN 码</string>
+    <string name="change_pin">更改 PIN 码</string>
+    <string name="pin_step_verify">输入当前 PIN 码</string>
+    <string name="pin_step_enter">输入新 PIN 码</string>
+    <string name="pin_step_confirm">确认新 PIN 码</string>
+    <string name="pin_error_mismatch">两次输入的 PIN 码不一致，请重试。</string>
+    <string name="pin_error_incorrect">PIN 码错误，请重试。</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">启用生物识别解锁？</string>
+    <string name="biometric_setup_description">使用指纹或面部识别快速解锁应用，无需每次输入 PIN 码。</string>
+    <string name="biometric_setup_skip">跳过，仅使用 PIN 码</string>
+    <string name="biometric_setup_enable">启用生物识别</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">使用指纹 / 面容</string>
+    <string name="enter_pin">请输入 PIN 码以继续</string>
+    <string name="incorrect_pin">PIN 码错误，请重试。</string>
+    <string name="biometric_subtitle">使用指纹或面部识别解锁</string>
+    <string name="use_pin_instead">改用 PIN 码</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">外观</string>
+    <string name="appearance_settings_label">视觉设置</string>
+    <string name="appearance_theme_label">主题模式</string>
+    <string name="appearance_theme_system">跟随系统</string>
+    <string name="appearance_theme_light">浅色模式</string>
+    <string name="appearance_theme_dark">深色模式</string>
+    <string name="appearance_dynamic_color">动态色彩</string>
+    <string name="appearance_dynamic_color_desc">应用系统取色 (Android 12+)</string>
+    <string name="appearance_color_scheme">配色方案</string>
+    <string name="appearance_color_dynamic">动态取色</string>
+    <string name="appearance_color_default">默认</string>
+    <string name="appearance_color_custom">自定义 (%1$s)</string>
+    <string name="appearance_black_theme">纯黑模式 (OLED)</string>
+    <string name="appearance_black_theme_desc">专为 OLED 屏幕设计的极黑配色</string>
+
+    <string name="color_chartreuse">黄绿 (Chartreuse)</string>
+    <string name="color_yellow">黄色</string>
+    <string name="color_amber">琥珀色</string>
+    <string name="color_orange">橙色</string>
+    <string name="color_soft_red">柔红</string>
+    <string name="color_pink">粉色</string>
+    <string name="color_purple">紫色</string>
+    <string name="color_indigo">靛蓝</string>
+    <string name="color_blue">蓝色</string>
+    <string name="color_cyan">青色</string>
+    <string name="color_teal">鸭翅绿 (Teal)</string>
+    <string name="color_green">绿色</string>
+    <string name="color_lime">青柠绿</string>
+
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="delete">删除</string>
+    <string name="app_icon_desc">应用图标</string>
+    <string name="no_app_to_open_link">没有可用于打开此链接的应用。</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">我们的应用</string>
+    <string name="title_activity_about">关于</string>
+    <string name="title_activity_appearance">外观</string>
+    <string name="color_red">红色</string>
+    <string name="app_desc">专为 Android 开发者打造的实用指南与可复用代码范例库。</string>
+    <string name="welcome_message">欢迎使用 El-8animah！</string>
+
+    <!-- About Screen -->
+    <string name="about_title">关于</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">应用开发者与软件工程师</string>
+    <string name="about_dev_bio">热爱构建简洁、实用且设计优雅的 Android 应用程序。</string>
+    <string name="about_dev_header">关于开发者</string>
+    <string name="about_contact_me">联系方式</string>
+    <string name="about_contact_email">邮箱</string>
+    <string name="about_contact_portfolio">作品集</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">领英</string>
+    <string name="about_made_with">精心打造于 </string>
+    <string name="about_in_egypt"> 埃及</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in (طمأنينة)</string>
+    <string name="app_motmaan_desc">您的日常信仰伴侣：礼拜时间、唤礼提醒、赞念词、古兰经和电子数珠计数器。</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">精美视觉与智能搜索，发现热门、流行和高评分电影。</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">通过拦截应用和网站来保持专注并管理屏幕使用时间，全面保护隐私。</string>
+</resources>

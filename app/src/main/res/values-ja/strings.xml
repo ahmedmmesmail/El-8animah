@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-8animah</string>
+    <string name="title_activity_settings">設定</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">設定</string>
+    <string name="settings_section_general">一般</string>
+    <string name="settings_appearance">外観</string>
+    <string name="settings_appearance_desc">テーマ、カラー、ディスプレイ</string>
+    <string name="settings_language">言語</string>
+    <string name="settings_language_desc">アプリの表示言語を変更</string>
+    <string name="settings_notifications">通知</string>
+    <string name="settings_notifications_desc">アプリのアクティビティ通知を受信</string>
+    <string name="settings_our_apps">その他のアプリ</string>
+    <string name="settings_our_apps_desc">その他のアプリをチェック</string>
+    <string name="settings_pin_lock">PINロック</string>
+    <string name="settings_pin_lock_desc">アプリへのアクセスにPINを要求</string>
+    <string name="settings_admin_device">端末管理者</string>
+    <string name="settings_section_data">データとバックアップ</string>
+    <string name="settings_backup">設定のバックアップ</string>
+    <string name="settings_backup_desc">設定をファイルにエクスポート</string>
+    <string name="settings_restore">設定の復元</string>
+    <string name="settings_restore_desc">ファイルから設定をインポート</string>
+    <string name="settings_reset">すべての設定をリセット</string>
+    <string name="settings_reset_desc">すべての設定を消去して初期化</string>
+    <string name="settings_reset_confirm">すべての設定をリセットしてもよろしいですか？</string>
+    <string name="settings_reset_confirm_yes">リセット</string>
+    <string name="settings_reset_confirm_no">キャンセル</string>
+    <string name="settings_section_support">サポート</string>
+    <string name="settings_section_about">このアプリについて</string>
+    <string name="settings_version">バージョン</string>
+    <string name="settings_privacy_policy">プライバシーポリシー</string>
+    <string name="settings_privacy_policy_desc">プライバシーポリシーを確認</string>
+    <string name="settings_rate_app">El-8animah を評価</string>
+    <string name="settings_rate_app_desc">気に入っていただけたら評価をお願いします</string>
+    <string name="settings_share_app">El-8animah を共有</string>
+    <string name="settings_share_app_desc">友達にアプリをおすすめする</string>
+    <string name="settings_feedback">フィードバックを送信</string>
+    <string name="settings_feedback_desc">不具合の報告や機能のご提案</string>
+    <string name="settings_about">El-8animah について</string>
+    <string name="settings_about_desc">アプリの開発者について</string>
+    <string name="feedback_title">フィードバックを送信</string>
+    <string name="feedback_type_bug">バグ報告</string>
+    <string name="feedback_type_feature">機能リクエスト</string>
+    <string name="feedback_type_other">その他</string>
+    <string name="feedback_message_hint">フィードバックの内容をここに入力してください…</string>
+    <string name="feedback_send">送信</string>
+    <string name="feedback_cancel">キャンセル</string>
+    <string name="feedback_type_label">種類</string>
+    <string name="settings_language_system">システムデフォルト</string>
+    <string name="auto">自動</string>
+
+    <!-- Backup -->
+    <string name="backup_success">バックアップを保存しました:\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">バックアップに失敗しました。もう一度お試しください。</string>
+    <string name="backup_permission_required">バックアップの保存にはストレージ権限が必要です。</string>
+    <string name="ok">OK</string>
+    <string name="settings_share">共有</string>
+    <string name="check_out">El-8animah アプリをチェック！</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">PINを設定</string>
+    <string name="set_pin">PINを設定</string>
+    <string name="change_pin">PINを変更</string>
+    <string name="pin_step_verify">現在のPINを入力</string>
+    <string name="pin_step_enter">新しいPINを入力</string>
+    <string name="pin_step_confirm">新しいPINを再確認</string>
+    <string name="pin_error_mismatch">PINが一致しません。もう一度入力してください。</string>
+    <string name="pin_error_incorrect">PINが間違っています。もう一度お試しください。</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">生体認証ロックを有効にしますか？</string>
+    <string name="biometric_setup_description">PINを毎回入力する代わりに、指紋または顔認証でロックを解除できます。</string>
+    <string name="biometric_setup_skip">スキップ（PINのみ）</string>
+    <string name="biometric_setup_enable">生体認証を有効にする</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">指紋 / 顔認証を使用</string>
+    <string name="enter_pin">続行するにはPINを入力してください</string>
+    <string name="incorrect_pin">PINが間違っています。もう一度お試しください。</string>
+    <string name="biometric_subtitle">指紋または顔認証でロック解除</string>
+    <string name="use_pin_instead">代わりにPINを使用</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">外観</string>
+    <string name="appearance_settings_label">視覚設定</string>
+    <string name="appearance_theme_label">テーマモード</string>
+    <string name="appearance_theme_system">システム連動</string>
+    <string name="appearance_theme_light">ライト</string>
+    <string name="appearance_theme_dark">ダーク</string>
+    <string name="appearance_dynamic_color">ダイナミックカラー</string>
+    <string name="appearance_dynamic_color_desc">システムカラーを適用 (Android 12+)</string>
+    <string name="appearance_color_scheme">カラースキーム</string>
+    <string name="appearance_color_dynamic">ダイナミック</string>
+    <string name="appearance_color_default">デフォルト</string>
+    <string name="appearance_color_custom">カスタム (%1$s)</string>
+    <string name="appearance_black_theme">ピュアブラック (OLED)</string>
+    <string name="appearance_black_theme_desc">OLED画面向けの高コントラストな黒</string>
+
+    <string name="color_chartreuse">シャルトルーズ</string>
+    <string name="color_yellow">イエロー</string>
+    <string name="color_amber">アンバー</string>
+    <string name="color_orange">オレンジ</string>
+    <string name="color_soft_red">ソフトレッド</string>
+    <string name="color_pink">ピンク</string>
+    <string name="color_purple">パープル</string>
+    <string name="color_indigo">インディゴ</string>
+    <string name="color_blue">ブルー</string>
+    <string name="color_cyan">シアン</string>
+    <string name="color_teal">ティール</string>
+    <string name="color_green">グリーン</string>
+    <string name="color_lime">ライム</string>
+
+    <string name="cancel">キャンセル</string>
+    <string name="back">戻る</string>
+    <string name="delete">削除</string>
+    <string name="app_icon_desc">アプリアイコン</string>
+    <string name="no_app_to_open_link">このリンクを開けるアプリがありません。</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">その他のアプリ</string>
+    <string name="title_activity_about">このアプリについて</string>
+    <string name="title_activity_appearance">外観</string>
+    <string name="color_red">レッド</string>
+    <string name="app_desc">Android開発者のための実用的なクックブック＆再利用可能な実装サンプル集。</string>
+    <string name="welcome_message">El-8animah へようこそ！</string>
+
+    <!-- About Screen -->
+    <string name="about_title">このアプリについて</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">アプリ開発者 ＆ ソフトウェアエンジニア</string>
+    <string name="about_dev_bio">シンプルで実用的、かつ美しいアプリづくりに情熱を注ぐAndroidエンジニア。</string>
+    <string name="about_dev_header">開発者について</string>
+    <string name="about_contact_me">お問い合わせ</string>
+    <string name="about_contact_email">メール</string>
+    <string name="about_contact_portfolio">ポートフォリオ</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">LinkedIn</string>
+    <string name="about_made_with">Created with </string>
+    <string name="about_in_egypt"> in Egypt</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in</string>
+    <string name="app_motmaan_desc">毎日の礼拝パートナー：礼拝時間、アザーン、アズカール、クルアーン、電子数珠カウンター。</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">美しいビジュアルとスマートな検索で、話題・人気・高評価の映画を発見。</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">アプリやWebサイトをブロックして集中力を高め、プライバシーを守りながらスクリーンタイムを管理。</string>
+</resources>

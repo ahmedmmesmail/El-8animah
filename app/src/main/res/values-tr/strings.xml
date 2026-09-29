@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-8animah</string>
+    <string name="title_activity_settings">Ayarlar</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_section_general">Genel</string>
+    <string name="settings_appearance">Görünüm</string>
+    <string name="settings_appearance_desc">Tema, renkler ve ekran ayarları</string>
+    <string name="settings_language">Dil</string>
+    <string name="settings_language_desc">Uygulama dilini değiştirin</string>
+    <string name="settings_notifications">Bildirimler</string>
+    <string name="settings_notifications_desc">Uygulama etkinlikleri hakkında uyarılar alın</string>
+    <string name="settings_our_apps">Uygulamalarımız</string>
+    <string name="settings_our_apps_desc">Diğer uygulamalarımızı keşfedin</string>
+    <string name="settings_pin_lock">PIN Kilidi</string>
+    <string name="settings_pin_lock_desc">Uygulamaya erişmek için PIN isteyin</string>
+    <string name="settings_admin_device">Cihaz Yöneticisi</string>
+    <string name="settings_section_data">Veri ve Yedekleme</string>
+    <string name="settings_backup">Ayarları Yedekle</string>
+    <string name="settings_backup_desc">Ayarlarınızı bir dosyaya aktarın</string>
+    <string name="settings_restore">Ayarları Geri Yükle</string>
+    <string name="settings_restore_desc">Bir yedek dosyasından ayarları yükleyin</string>
+    <string name="settings_reset">Tüm Ayarları Sıfırla</string>
+    <string name="settings_reset_desc">Tüm ayarları temizleyin ve baştan başlayın</string>
+    <string name="settings_reset_confirm">Her şeyi sıfırlamak istediğinizden emin misiniz?</string>
+    <string name="settings_reset_confirm_yes">Sıfırla</string>
+    <string name="settings_reset_confirm_no">İptal</string>
+    <string name="settings_section_support">Destek</string>
+    <string name="settings_section_about">Hakkında</string>
+    <string name="settings_version">Sürüm</string>
+    <string name="settings_privacy_policy">Gizlilik Politikası</string>
+    <string name="settings_privacy_policy_desc">Gizlilik politikamızı okuyun</string>
+    <string name="settings_rate_app">El-8animah\'ı Değerlendir</string>
+    <string name="settings_rate_app_desc">Uygulamayı beğendiniz mi? Yorum yapın</string>
+    <string name="settings_share_app">El-8animah\'ı Paylaş</string>
+    <string name="settings_share_app_desc">Uygulamayı bir arkadaşınıza önerin</string>
+    <string name="settings_feedback">Geri Bildirim Gönder</string>
+    <string name="settings_feedback_desc">Hata bildirin veya özellik önerin</string>
+    <string name="settings_about">El-8animah Hakkında</string>
+    <string name="settings_about_desc">Uygulamanın geliştiricisi ile tanışın</string>
+    <string name="feedback_title">Geri Bildirim Gönder</string>
+    <string name="feedback_type_bug">Hata Bildirimi</string>
+    <string name="feedback_type_feature">Özellik İsteği</string>
+    <string name="feedback_type_other">Diğer</string>
+    <string name="feedback_message_hint">Geri bildiriminizi buraya yazın…</string>
+    <string name="feedback_send">Gönder</string>
+    <string name="feedback_cancel">İptal</string>
+    <string name="feedback_type_label">Tür</string>
+    <string name="settings_language_system">Sistem Varsayılanı</string>
+    <string name="auto">Otomatik</string>
+
+    <!-- Backup -->
+    <string name="backup_success">Yedek kaydedildi:\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">Yedekleme başarısız oldu. Lütfen tekrar deneyin.</string>
+    <string name="backup_permission_required">Yedekleri kaydetmek için depolama izni gereklidir.</string>
+    <string name="ok">Tamam</string>
+    <string name="settings_share">Paylaş</string>
+    <string name="check_out">El-8animah uygulamasına göz atın!</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">PIN Ayarla</string>
+    <string name="set_pin">PIN Ayarla</string>
+    <string name="change_pin">PIN Değiştir</string>
+    <string name="pin_step_verify">Mevcut PIN kodunuzu girin</string>
+    <string name="pin_step_enter">Yeni PIN kodunuzu girin</string>
+    <string name="pin_step_confirm">Yeni PIN kodunuzu onaylayın</string>
+    <string name="pin_error_mismatch">PIN kodları eşleşmiyor. Tekrar deneyin.</string>
+    <string name="pin_error_incorrect">Yanlış PIN. Tekrar deneyin.</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">Biyometrik kilit etkinleştirilsin mi?</string>
+    <string name="biometric_setup_description">Her seferinde PIN girmek yerine parmak izinizi veya yüzünüzü kullanın.</string>
+    <string name="biometric_setup_skip">Atla, sadece PIN</string>
+    <string name="biometric_setup_enable">Biyometriyi Etkinleştir</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">Parmak İzi / Yüz Tanıma</string>
+    <string name="enter_pin">Devam etmek için PIN girin</string>
+    <string name="incorrect_pin">Yanlış PIN. Tekrar deneyin.</string>
+    <string name="biometric_subtitle">Kilidi açmak için parmak izinizi veya yüzünüzü kullanın</string>
+    <string name="use_pin_instead">Bunun yerine PIN kullan</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">Görünüm</string>
+    <string name="appearance_settings_label">Görsel Ayarlar</string>
+    <string name="appearance_theme_label">Tema Modu</string>
+    <string name="appearance_theme_system">Sistem</string>
+    <string name="appearance_theme_light">Açık</string>
+    <string name="appearance_theme_dark">Koyu</string>
+    <string name="appearance_dynamic_color">Dinamik Renk</string>
+    <string name="appearance_dynamic_color_desc">Sistem renklerini uygula (Android 12+)</string>
+    <string name="appearance_color_scheme">Renk Şeması</string>
+    <string name="appearance_color_dynamic">Dinamik</string>
+    <string name="appearance_color_default">Varsayılan</string>
+    <string name="appearance_color_custom">Özel (%1$s)</string>
+    <string name="appearance_black_theme">Saf Siyah (OLED)</string>
+    <string name="appearance_black_theme_desc">OLED ekranlar için derin siyah</string>
+
+    <string name="color_chartreuse">Sarı-Yeşil (Chartreuse)</string>
+    <string name="color_yellow">Sarı</string>
+    <string name="color_amber">Kehribar</string>
+    <string name="color_orange">Turuncu</string>
+    <string name="color_soft_red">Yumuşak Kırmızı</string>
+    <string name="color_pink">Pembe</string>
+    <string name="color_purple">Mor</string>
+    <string name="color_indigo">Çivit Mavisi</string>
+    <string name="color_blue">Mavi</string>
+    <string name="color_cyan">Camgöbeği</string>
+    <string name="color_teal">Petrol Yeşili (Teal)</string>
+    <string name="color_green">Yeşil</string>
+    <string name="color_lime">Misket Limonu</string>
+
+    <string name="cancel">İptal</string>
+    <string name="back">Geri</string>
+    <string name="delete">Sil</string>
+    <string name="app_icon_desc">Uygulama Simgesi</string>
+    <string name="no_app_to_open_link">Bu bağlantıyı açacak uygulama bulunamadı.</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">Uygulamalarımız</string>
+    <string name="title_activity_about">Hakkında</string>
+    <string name="title_activity_appearance">Görünüm</string>
+    <string name="color_red">Kırmızı</string>
+    <string name="app_desc">Android geliştiricileri için yeniden kullanılabilir çözümler ve örnekler içeren pratik bir rehber.</string>
+    <string name="welcome_message">El-8animah\'a Hoş Geldiniz!</string>
+
+    <!-- About Screen -->
+    <string name="about_title">Hakkında</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">Uygulama Geliştiricisi ve Yazılım Mühendisi</string>
+    <string name="about_dev_bio">Basit, kullanışlı ve şık Android uygulamaları geliştirmeye tutkulu yazılımcı.</string>
+    <string name="about_dev_header">Geliştirici Hakkında</string>
+    <string name="about_contact_me">İletişim</string>
+    <string name="about_contact_email">E-posta</string>
+    <string name="about_contact_portfolio">Portföy</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">LinkedIn</string>
+    <string name="about_made_with">Sevgiyle yapıldı: </string>
+    <string name="about_in_egypt"> Mısır\'da</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in</string>
+    <string name="app_motmaan_desc">Günlük ibadet yoldaşınız: Namaz vakitleri, Ezan, Zikirler, Kur\'an-ı Kerim ve dijital tesbih sayacı.</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">Güzel görseller ve akıllı arama ile popüler, trend ve en çok beğenilen filmleri keşfedin.</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">Uygulamaları ve siteleri engelleyerek odaklanın ve ekran sürenizi gizliliğinizi koruyarak yönetin.</string>
+</resources>

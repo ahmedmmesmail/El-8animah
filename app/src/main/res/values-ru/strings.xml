@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-8animah</string>
+    <string name="title_activity_settings">Настройки</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_section_general">Основные</string>
+    <string name="settings_appearance">Внешний вид</string>
+    <string name="settings_appearance_desc">Тема, цвета и оформление</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_language_desc">Изменить язык приложения</string>
+    <string name="settings_notifications">Уведомления</string>
+    <string name="settings_notifications_desc">Получать оповещения о событиях</string>
+    <string name="settings_our_apps">Наши приложения</string>
+    <string name="settings_our_apps_desc">Познакомьтесь с другими нашими приложениями</string>
+    <string name="settings_pin_lock">Блокировка PIN-кодом</string>
+    <string name="settings_pin_lock_desc">Запрашивать PIN-код для входа</string>
+    <string name="settings_admin_device">Администратор устройства</string>
+    <string name="settings_section_data">Данные и резервное копирование</string>
+    <string name="settings_backup">Резервное копирование</string>
+    <string name="settings_backup_desc">Экспорт настроек в файл</string>
+    <string name="settings_restore">Восстановление настроек</string>
+    <string name="settings_restore_desc">Импорт настроек из файла</string>
+    <string name="settings_reset">Сбросить все настройки</string>
+    <string name="settings_reset_desc">Очистить все настройки и начать заново</string>
+    <string name="settings_reset_confirm">Вы уверены, что хотите сбросить все настройки?</string>
+    <string name="settings_reset_confirm_yes">Сбросить</string>
+    <string name="settings_reset_confirm_no">Отмена</string>
+    <string name="settings_section_support">Поддержка</string>
+    <string name="settings_section_about">О приложении</string>
+    <string name="settings_version">Версия</string>
+    <string name="settings_privacy_policy">Политика конфиденциальности</string>
+    <string name="settings_privacy_policy_desc">Ознакомиться с политикой конфиденциальности</string>
+    <string name="settings_rate_app">Оценить El-8animah</string>
+    <string name="settings_rate_app_desc">Нравится приложение? Оставьте отзыв</string>
+    <string name="settings_share_app">Поделиться El-8animah</string>
+    <string name="settings_share_app_desc">Порекомендовать приложение друзьям</string>
+    <string name="settings_feedback">Отправить отзыв</string>
+    <string name="settings_feedback_desc">Сообщить об ошибке или предложить идею</string>
+    <string name="settings_about">О приложении El-8animah</string>
+    <string name="settings_about_desc">Информация о разработчике</string>
+    <string name="feedback_title">Отправить отзыв</string>
+    <string name="feedback_type_bug">Отчет об ошибке</string>
+    <string name="feedback_type_feature">Предложение функции</string>
+    <string name="feedback_type_other">Другое</string>
+    <string name="feedback_message_hint">Напишите ваш отзыв здесь…</string>
+    <string name="feedback_send">Отправить</string>
+    <string name="feedback_cancel">Отмена</string>
+    <string name="feedback_type_label">Тип</string>
+    <string name="settings_language_system">Системный по умолчанию</string>
+    <string name="auto">Авто</string>
+
+    <!-- Backup -->
+    <string name="backup_success">Резервная копия сохранена в:\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">Ошибка резервного копирования. Попробуйте еще раз.</string>
+    <string name="backup_permission_required">Требуется разрешение на хранилище для сохранения копий.</string>
+    <string name="ok">OK</string>
+    <string name="settings_share">Поделиться</string>
+    <string name="check_out">Попробуйте приложение El-8animah!</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">Установить PIN-код</string>
+    <string name="set_pin">Установить PIN-код</string>
+    <string name="change_pin">Изменить PIN-код</string>
+    <string name="pin_step_verify">Введите текущий PIN-код</string>
+    <string name="pin_step_enter">Введите новый PIN-код</string>
+    <string name="pin_step_confirm">Подтвердите новый PIN-код</string>
+    <string name="pin_error_mismatch">PIN-коды не совпадают. Попробуйте снова.</string>
+    <string name="pin_error_incorrect">Неверный PIN-код. Попробуйте снова.</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">Включить биометрию?</string>
+    <string name="biometric_setup_description">Используйте отпечаток пальца или лицо для быстрого входа без постоянного ввода PIN-кода.</string>
+    <string name="biometric_setup_skip">Пропустить, только PIN</string>
+    <string name="biometric_setup_enable">Включить биометрию</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">Отпечаток / Лицо</string>
+    <string name="enter_pin">Введите PIN-код для продолжения</string>
+    <string name="incorrect_pin">Неверный PIN-код. Попробуйте снова.</string>
+    <string name="biometric_subtitle">Используйте отпечаток или лицо для разблокировки</string>
+    <string name="use_pin_instead">Использовать PIN-код</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">Внешний вид</string>
+    <string name="appearance_settings_label">Визуальные настройки</string>
+    <string name="appearance_theme_label">Режим темы</string>
+    <string name="appearance_theme_system">Системная</string>
+    <string name="appearance_theme_light">Светлая</string>
+    <string name="appearance_theme_dark">Темная</string>
+    <string name="appearance_dynamic_color">Динамические цвета</string>
+    <string name="appearance_dynamic_color_desc">Цвета системы Android (Android 12+)</string>
+    <string name="appearance_color_scheme">Цветовая схема</string>
+    <string name="appearance_color_dynamic">Динамическая</string>
+    <string name="appearance_color_default">По умолчанию</string>
+    <string name="appearance_color_custom">Пользовательская (%1$s)</string>
+    <string name="appearance_black_theme">Глубокий черный (OLED)</string>
+    <string name="appearance_black_theme_desc">Чистый черный для OLED экранов</string>
+
+    <string name="color_chartreuse">Шартрез</string>
+    <string name="color_yellow">Желтый</string>
+    <string name="color_amber">Янтарный</string>
+    <string name="color_orange">Оранжевый</string>
+    <string name="color_soft_red">Мягкий красный</string>
+    <string name="color_pink">Розовый</string>
+    <string name="color_purple">Фиолетовый</string>
+    <string name="color_indigo">Индиго</string>
+    <string name="color_blue">Синий</string>
+    <string name="color_cyan">Голубой</string>
+    <string name="color_teal">Бирюзовый (Teal)</string>
+    <string name="color_green">Зеленый</string>
+    <string name="color_lime">Лаймовый</string>
+
+    <string name="cancel">Отмена</string>
+    <string name="back">Назад</string>
+    <string name="delete">Удалить</string>
+    <string name="app_icon_desc">Иконка приложения</string>
+    <string name="no_app_to_open_link">Нет приложения для открытия этой ссылки.</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">Наши приложения</string>
+    <string name="title_activity_about">О приложении</string>
+    <string name="title_activity_appearance">Внешний вид</string>
+    <string name="color_red">Красный</string>
+    <string name="app_desc">Практическое руководство и справочник с готовыми решениями для Android-разработчиков.</string>
+    <string name="welcome_message">Добро пожаловать в El-8animah!</string>
+
+    <!-- About Screen -->
+    <string name="about_title">О приложении</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">Разработчик приложений и инженер ПО</string>
+    <string name="about_dev_bio">Android-разработчик, увлеченный созданием простых, удобных и красивых приложений.</string>
+    <string name="about_dev_header">О разработчике</string>
+    <string name="about_contact_me">Контакты</string>
+    <string name="about_contact_email">Эл. почта</string>
+    <string name="about_contact_portfolio">Портфолио</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">LinkedIn</string>
+    <string name="about_made_with">Создано с </string>
+    <string name="about_in_egypt"> в Египте</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in</string>
+    <string name="app_motmaan_desc">Ваш ежедневный спутник в поклонении: время намаза, азан, азкары, Священный Коран и электронные четки.</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">Узнавайте о трендовых, популярных и высокооцененных фильмах с красивым дизайном и умным поиском.</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">Сохраняйте фокус и контролируйте экранное время, блокируя приложения и сайты без ущерба для приватности.</string>
+</resources>

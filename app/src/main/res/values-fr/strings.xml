@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-8animah</string>
+    <string name="title_activity_settings">Paramètres</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_section_general">Général</string>
+    <string name="settings_appearance">Apparence</string>
+    <string name="settings_appearance_desc">Thème, couleurs et affichage</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_language_desc">Changer la langue de l\'application</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_notifications_desc">Recevoir des alertes sur l\'activité</string>
+    <string name="settings_our_apps">Nos applications</string>
+    <string name="settings_our_apps_desc">Découvrez nos autres applications</string>
+    <string name="settings_pin_lock">Verrouillage par code PIN</string>
+    <string name="settings_pin_lock_desc">Exiger un code PIN pour ouvrir l\'app</string>
+    <string name="settings_admin_device">Admin de l\'appareil</string>
+    <string name="settings_section_data">Données et sauvegarde</string>
+    <string name="settings_backup">Sauvegarder les paramètres</string>
+    <string name="settings_backup_desc">Exporter vos paramètres dans un fichier</string>
+    <string name="settings_restore">Restaurer les paramètres</string>
+    <string name="settings_restore_desc">Importer les paramètres d\'un fichier</string>
+    <string name="settings_reset">Réinitialiser les paramètres</string>
+    <string name="settings_reset_desc">Effacer tous les paramètres et repartir à zéro</string>
+    <string name="settings_reset_confirm">Voulez-vous vraiment tout réinitialiser ?</string>
+    <string name="settings_reset_confirm_yes">Réinitialiser</string>
+    <string name="settings_reset_confirm_no">Annuler</string>
+    <string name="settings_section_support">Assistance</string>
+    <string name="settings_section_about">À propos</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_privacy_policy">Politique de confidentialité</string>
+    <string name="settings_privacy_policy_desc">Consulter notre politique de confidentialité</string>
+    <string name="settings_rate_app">Évaluer El-8animah</string>
+    <string name="settings_rate_app_desc">Vous aimez l\'application ? Laissez un avis</string>
+    <string name="settings_share_app">Partager El-8animah</string>
+    <string name="settings_share_app_desc">Recommander l\'application à un ami</string>
+    <string name="settings_feedback">Envoyer des commentaires</string>
+    <string name="settings_feedback_desc">Signaler un bogue ou suggérer une idée</string>
+    <string name="settings_about">À propos d\'El-8animah</string>
+    <string name="settings_about_desc">Faites connaissance avec le développeur</string>
+    <string name="feedback_title">Envoyer des commentaires</string>
+    <string name="feedback_type_bug">Rapport de bogue</string>
+    <string name="feedback_type_feature">Demande de fonctionnalité</string>
+    <string name="feedback_type_other">Autre</string>
+    <string name="feedback_message_hint">Décrivez vos remarques ici…</string>
+    <string name="feedback_send">Envoyer</string>
+    <string name="feedback_cancel">Annuler</string>
+    <string name="feedback_type_label">Type</string>
+    <string name="settings_language_system">Par défaut du système</string>
+    <string name="auto">Auto</string>
+
+    <!-- Backup -->
+    <string name="backup_success">Sauvegarde enregistrée dans :\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">Échec de la sauvegarde. Veuillez réessayer.</string>
+    <string name="backup_permission_required">L\'autorisation de stockage est requise pour enregistrer les sauvegardes.</string>
+    <string name="ok">OK</string>
+    <string name="settings_share">Partager</string>
+    <string name="check_out">Découvrez El-8animah !</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">Définir un code PIN</string>
+    <string name="set_pin">Définir un code PIN</string>
+    <string name="change_pin">Modifier le code PIN</string>
+    <string name="pin_step_verify">Entrez votre code PIN actuel</string>
+    <string name="pin_step_enter">Entrez votre nouveau code PIN</string>
+    <string name="pin_step_confirm">Confirmez votre nouveau code PIN</string>
+    <string name="pin_error_mismatch">Les codes PIN ne correspondent pas. Réessayez.</string>
+    <string name="pin_error_incorrect">Code PIN incorrect. Réessayez.</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">Activer le déverrouillage biométrique ?</string>
+    <string name="biometric_setup_description">Utilisez votre empreinte ou votre visage pour déverrouiller l\'application sans saisir le code PIN.</string>
+    <string name="biometric_setup_skip">Ignorer, PIN uniquement</string>
+    <string name="biometric_setup_enable">Activer la biométrie</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">Utiliser empreinte / visage</string>
+    <string name="enter_pin">Entrez votre code PIN pour continuer</string>
+    <string name="incorrect_pin">Code PIN incorrect. Réessayez.</string>
+    <string name="biometric_subtitle">Utilisez votre empreinte ou votre visage pour déverrouiller</string>
+    <string name="use_pin_instead">Utiliser le code PIN à la place</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">Apparence</string>
+    <string name="appearance_settings_label">Paramètres visuels</string>
+    <string name="appearance_theme_label">Mode de thème</string>
+    <string name="appearance_theme_system">Système</string>
+    <string name="appearance_theme_light">Clair</string>
+    <string name="appearance_theme_dark">Sombre</string>
+    <string name="appearance_dynamic_color">Couleur dynamique</string>
+    <string name="appearance_dynamic_color_desc">Appliquer les couleurs du système (Android 12+)</string>
+    <string name="appearance_color_scheme">Palette de couleurs</string>
+    <string name="appearance_color_dynamic">Dynamique</string>
+    <string name="appearance_color_default">Par défaut</string>
+    <string name="appearance_color_custom">Personnalisé (%1$s)</string>
+    <string name="appearance_black_theme">Noir absolu (OLED)</string>
+    <string name="appearance_black_theme_desc">Noir profond optimisé pour écrans OLED</string>
+
+    <string name="color_chartreuse">Chartreuse</string>
+    <string name="color_yellow">Jaune</string>
+    <string name="color_amber">Ambre</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_soft_red">Rouge doux</string>
+    <string name="color_pink">Rose</string>
+    <string name="color_purple">Violet</string>
+    <string name="color_indigo">Indigo</string>
+    <string name="color_blue">Bleu</string>
+    <string name="color_cyan">Cyan</string>
+    <string name="color_teal">Sarcelle (Teal)</string>
+    <string name="color_green">Vert</string>
+    <string name="color_lime">Lime</string>
+
+    <string name="cancel">Annuler</string>
+    <string name="back">Retour</string>
+    <string name="delete">Supprimer</string>
+    <string name="app_icon_desc">Icône de l\'application</string>
+    <string name="no_app_to_open_link">Aucune application pour ouvrir ce lien.</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">Nos applications</string>
+    <string name="title_activity_about">À propos</string>
+    <string name="title_activity_appearance">Apparence</string>
+    <string name="color_red">Rouge</string>
+    <string name="app_desc">Un guide pratique et livre de recettes contenant des solutions et composants réutilisables pour les développeurs Android.</string>
+    <string name="welcome_message">Bienvenue sur El-8animah !</string>
+
+    <!-- About Screen -->
+    <string name="about_title">À propos</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">Développeur d\'applications et ingénieur logiciel</string>
+    <string name="about_dev_bio">Développeur Android passionné par la conception d\'applications simples, utiles et élégantes.</string>
+    <string name="about_dev_header">À propos du développeur</string>
+    <string name="about_contact_me">Me contacter</string>
+    <string name="about_contact_email">E-mail</string>
+    <string name="about_contact_portfolio">Portfolio</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">LinkedIn</string>
+    <string name="about_made_with">Conçu avec </string>
+    <string name="about_in_egypt"> en Égypte</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in</string>
+    <string name="app_motmaan_desc">Votre compagnon spirituel quotidien : horaires de prière, Adhan, Adhkar, Saint Coran et chapelet numérique.</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">Découvrez les films tendance, populaires et les mieux notés avec une interface visuelle raffinée et une recherche intelligente.</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">Restez concentré et maîtrisez votre temps d\'écran en bloquant les applications et sites, dans le respect total de votre vie privée.</string>
+</resources>

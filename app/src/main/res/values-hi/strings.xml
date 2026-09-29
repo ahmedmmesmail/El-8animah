@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El-8animah</string>
+    <string name="title_activity_settings">सेटिंग्स</string>
+
+    <!-- ==================== Settings ==================== -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_section_general">सामान्य</string>
+    <string name="settings_appearance">दिखावट</string>
+    <string name="settings_appearance_desc">थीम, रंग और डिस्प्ले</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_language_desc">ऐप की भाषा बदलें</string>
+    <string name="settings_notifications">सूचनाएं</string>
+    <string name="settings_notifications_desc">ऐप गतिविधि के अलर्ट प्राप्त करें</string>
+    <string name="settings_our_apps">हमारे ऐप्स</string>
+    <string name="settings_our_apps_desc">हमारे अन्य ऐप्स देखें</string>
+    <string name="settings_pin_lock">पिन लॉक</string>
+    <string name="settings_pin_lock_desc">ऐप खोलने के लिए पिन आवश्यक करें</string>
+    <string name="settings_admin_device">डिवाइस व्यवस्थापक</string>
+    <string name="settings_section_data">डेटा और बैकअप</string>
+    <string name="settings_backup">बैकअप सेटिंग्स</string>
+    <string name="settings_backup_desc">अपनी सेटिंग्स को फ़ाइल में निर्यात करें</string>
+    <string name="settings_restore">सेटिंग्स पुनर्स्थापित करें</string>
+    <string name="settings_restore_desc">बैकअप फ़ाइल से सेटिंग्स आयात करें</string>
+    <string name="settings_reset">सभी सेटिंग्स रीसेट करें</string>
+    <string name="settings_reset_desc">सभी सेटिंग्स साफ़ करें और रीसेट करें</string>
+    <string name="settings_reset_confirm">क्या आप वाकई सब कुछ रीसेट करना चाहते हैं?</string>
+    <string name="settings_reset_confirm_yes">रीसेट करें</string>
+    <string name="settings_reset_confirm_no">रद्द करें</string>
+    <string name="settings_section_support">सहायता</string>
+    <string name="settings_section_about">के बारे में</string>
+    <string name="settings_version">संस्करण</string>
+    <string name="settings_privacy_policy">गोपनीयता नीति</string>
+    <string name="settings_privacy_policy_desc">हमारी गोपनीयता नीति पढ़ें</string>
+    <string name="settings_rate_app">El-8animah को रेट करें</string>
+    <string name="settings_rate_app_desc">ऐप पसंद आया? एक समीक्षा लिखें</string>
+    <string name="settings_share_app">El-8animah साझा करें</string>
+    <string name="settings_share_app_desc">दोस्तों को यह ऐप सुझाएं</string>
+    <string name="settings_feedback">प्रतिक्रिया भेजें</string>
+    <string name="settings_feedback_desc">बग की रिपोर्ट करें या सुविधा का सुझाव दें</string>
+    <string name="settings_about">El-8animah के बारे में</string>
+    <string name="settings_about_desc">डेवलपर के बारे में जानें</string>
+    <string name="feedback_title">प्रतिक्रिया भेजें</string>
+    <string name="feedback_type_bug">बग रिपोर्ट</string>
+    <string name="feedback_type_feature">सुविधा अनुरोध</string>
+    <string name="feedback_type_other">अन्य</string>
+    <string name="feedback_message_hint">अपनी प्रतिक्रिया यहाँ लिखें…</string>
+    <string name="feedback_send">भेजें</string>
+    <string name="feedback_cancel">रद्द करें</string>
+    <string name="feedback_type_label">प्रकार</string>
+    <string name="settings_language_system">सिस्टम डिफ़ॉल्ट</string>
+    <string name="auto">ऑटो</string>
+
+    <!-- Backup -->
+    <string name="backup_success">बैकअप सहेजा गया:\nDocuments/El-8animah/%1$s</string>
+    <string name="backup_failed">बैकअप विफल रहा। कृपया पुन: प्रयास करें।</string>
+    <string name="backup_permission_required">बैकअप सहेजने के लिए स्टोरेज अनुमति आवश्यक है।</string>
+    <string name="ok">ठीक है</string>
+    <string name="settings_share">साझा करें</string>
+    <string name="check_out">El-8animah ऐप आज़माएं!</string>
+
+    <!-- PIN Management -->
+    <string name="create_pin">पिन सेट करें</string>
+    <string name="set_pin">पिन सेट करें</string>
+    <string name="change_pin">पिन बदलें</string>
+    <string name="pin_step_verify">वर्तमान पिन दर्ज करें</string>
+    <string name="pin_step_enter">नया पिन दर्ज करें</string>
+    <string name="pin_step_confirm">नए पिन की पुष्टि करें</string>
+    <string name="pin_error_mismatch">पिन मेल नहीं खाते। पुन: प्रयास करें।</string>
+    <string name="pin_error_incorrect">गलत पिन। पुन: प्रयास करें।</string>
+
+    <!-- Biometrics -->
+    <string name="biometric_setup_title">बायोमेट्रिक अनलॉक सक्षम करें?</string>
+    <string name="biometric_setup_description">हर बार पिन दर्ज करने के बजाय फिंगरप्रिंट या चेहरे का उपयोग करें।</string>
+    <string name="biometric_setup_skip">छोड़ें, केवल पिन</string>
+    <string name="biometric_setup_enable">बायोमेट्रिक सक्षम करें</string>
+    <!-- ==================== PIN LOCK ==================== -->
+    <string name="use_biometric">फिंगरप्रिंट / चेहरा उपयोग करें</string>
+    <string name="enter_pin">जारी रखने के लिए पिन दर्ज करें</string>
+    <string name="incorrect_pin">गलत पिन। पुन: प्रयास करें।</string>
+    <string name="biometric_subtitle">अनलॉक करने के लिए फिंगरप्रिंट या चेहरे का उपयोग करें</string>
+    <string name="use_pin_instead">इसके बजाय पिन का उपयोग करें</string>
+
+    <!-- Appearance -->
+    <string name="appearance_title">दिखावट</string>
+    <string name="appearance_settings_label">विजुअल सेटिंग्स</string>
+    <string name="appearance_theme_label">थीम मोड</string>
+    <string name="appearance_theme_system">सिस्टम</string>
+    <string name="appearance_theme_light">लाइट</string>
+    <string name="appearance_theme_dark">डार्क</string>
+    <string name="appearance_dynamic_color">डायनामिक रंग</string>
+    <string name="appearance_dynamic_color_desc">सिस्टम रंग लागू करें (Android 12+)</string>
+    <string name="appearance_color_scheme">रंग योजना</string>
+    <string name="appearance_color_dynamic">डायनामिक</string>
+    <string name="appearance_color_default">डिफ़ॉल्ट</string>
+    <string name="appearance_color_custom">कस्टम (%1$s)</string>
+    <string name="appearance_black_theme">गहरा काला (OLED)</string>
+    <string name="appearance_black_theme_desc">OLED स्क्रीन के लिए गहरा काला</string>
+
+    <string name="color_chartreuse">शारत्रोज़</string>
+    <string name="color_yellow">पीला</string>
+    <string name="color_amber">अंबर</string>
+    <string name="color_orange">नारंगी</string>
+    <string name="color_soft_red">हल्का लाल</string>
+    <string name="color_pink">गुलाबी</string>
+    <string name="color_purple">बैंगनी</string>
+    <string name="color_indigo">इंडिगो</string>
+    <string name="color_blue">नीला</string>
+    <string name="color_cyan">सियान</string>
+    <string name="color_teal">टील</string>
+    <string name="color_green">हरा</string>
+    <string name="color_lime">नींबू हरा</string>
+
+    <string name="cancel">रद्द करें</string>
+    <string name="back">वापस</string>
+    <string name="delete">हटाएं</string>
+    <string name="app_icon_desc">ऐप आइकन</string>
+    <string name="no_app_to_open_link">इस लिंक को खोलने के लिए कोई ऐप उपलब्ध नहीं है।</string>
+    <string name="title_activity_pin_lock">PinLockActivity</string>
+    <string name="title_activity_our_apps">हमारे ऐप्स</string>
+    <string name="title_activity_about">के बारे में</string>
+    <string name="title_activity_appearance">दिखावट</string>
+    <string name="color_red">लाल</string>
+    <string name="app_desc">Android डेवलपर्स के लिए पुन: प्रयोज्य समाधानों और घटकों की एक व्यावहारिक कुकबुक।</string>
+    <string name="welcome_message">El-8animah में आपका स्वागत है!</string>
+
+    <!-- About Screen -->
+    <string name="about_title">के बारे में</string>
+    <string name="about_dev_name">ahmedmmesmail</string>
+    <string name="about_dev_title">ऐप डेवलपर और सॉफ्टवेयर इंजीनियर</string>
+    <string name="about_dev_bio">सरल, उपयोगी और सुंदर ऐप्स बनाने के प्रति उत्साही Android डेवलपर।</string>
+    <string name="about_dev_header">डेवलपर के बारे में</string>
+    <string name="about_contact_me">संपर्क करें</string>
+    <string name="about_contact_email">ईमेल</string>
+    <string name="about_contact_portfolio">पोर्टफोलियो</string>
+    <string name="about_contact_github">GitHub</string>
+    <string name="about_contact_linkedin">LinkedIn</string>
+    <string name="about_made_with">निर्मित </string>
+    <string name="about_in_egypt"> मिस्र में</string>
+
+    <!-- Our Apps Screen -->
+    <string name="app_motmaan_name">Mutma\'in</string>
+    <string name="app_motmaan_desc">आपकी दैनिक इबादत का साथी: प्रार्थना का समय, अज़ान, अज़कार, पवित्र कुरान और डिजिटल तस्बीह काउंटर।</string>
+    <string name="app_cinemeteor_name">CineMeteor</string>
+    <string name="app_cinemeteor_desc">शानदार विजुअल्स और स्मार्ट खोज के साथ ट्रेंडिंग और टॉप-रेटेड फिल्मों की खोज करें।</string>
+    <string name="app_detauro_name">DeTauro</string>
+    <string name="app_detauro_desc">पूर्ण गोपनीयता के साथ ऐप्स और साइटों को ब्लॉक करके ध्यान केंद्रित रखें और स्क्रीन समय नियंत्रित करें।</string>
+</resources>
